@@ -17,6 +17,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Story+Script&display=swap"
     rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script defer type="module" src="../src/js/swipper.js"> </script>
 </head>
 
 <body class="bg-gray-50">
@@ -38,7 +42,8 @@
           <div class="flex items-center justify-center space-x-6">
 
             <!-- Contact -->
-            <div class="hidden md:flex items-center space-x-1 text-black transform -translate-x-[20px] cursor-pointer hover:text-red-600">
+            <div
+              class="hidden md:flex items-center space-x-1 text-black transform -translate-x-[20px] cursor-pointer hover:text-red-600">
               <div class="p-2 rounded-full">
                 <i class="ri-phone-line text-4xl"></i>
               </div>
@@ -53,7 +58,8 @@
 
                 <!-- Category -->
                 <button class="flex items-center gap-2 py-2 text-sm text-gray-700 hover:bg-gray-200 border-r ml-5">
-                  <span class="whitespace-nowrap text-black font-[Poppins] font-medium text-[14px]">All Categories</span>
+                  <span class="whitespace-nowrap text-black font-[Poppins] font-medium text-[14px]">All
+                    Categories</span>
                   <i class="ri-arrow-down-s-line"></i>
                 </button>
 
@@ -76,7 +82,8 @@
           class="col-span-12 sm:col-span-12 lg:col-span-3 xl:col-span-4 flex items-center justify-end space-x-4 transform translate-x-[100px]">
           <!-- Dil seçimi -->
           <div class="relative" id="langWrap">
-            <button id="langBtn" class="flex transform translate-x-5 items-center space-x-1 px-3 py-2 rounded-md hover:bg-gray-50">
+            <button id="langBtn"
+              class="flex transform translate-x-5 items-center space-x-1 px-3 py-2 rounded-md hover:bg-gray-50">
               <img id="langBtnImg"
                 src="https://merto-be87.kxcdn.com/merto/wp-content/plugins/themesky-demo/images/flags/english.png"
                 alt="lang" class="w-4 h-3 rounded-sm object-cover">
@@ -129,10 +136,170 @@
             </button>
           </div>
         </div>
+      </div>
+    </div>
+    <!-- Bottom Navigation -->
+    <div class="">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center gap-6 py-3">
 
+          <!-- Shop by categories button -->
+          <button class="flex items-center gap-2 transform -translate-x-[120px] mt-5 rounded bg-white hover:shadow-sm">
+            <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <span class="text-sm font-medium text-black">SHOP BY CATEGORIES</span>
+          </button>
+
+          <!-- Nav links -->
+          <nav class="flex-1 overflow-x-auto mt-3 transform -translate-x-[70px]">
+            <ul class="flex items-center gap-[50px] whitespace-nowrap ">
+              <ul class="flex space-x-6">
+                <li class="">
+                  <a href="#" class="text-[14px] font-[Poppins] text-black group-hover:text-red-600">
+                    Homepages
+                  </a>
+                  <i class="ri-arrow-drop-down-line ml-1 text-xl text-black group-hover:text-red-600"></i>
+                </li>
+
+                <li class="group flex items-center">
+                  <a href="#" class="text-[14px] font-[Poppins] text-black group-hover:text-red-600">
+                    Categories
+                  </a>
+                  <i class="ri-arrow-drop-down-line ml-1 text-xl text-black group-hover:text-red-600"></i>
+                </li>
+
+                <li class="group flex items-center">
+                  <a href="#" class="text-[14px] font-[Poppins] text-black group-hover:text-red-600">
+                    Products
+                  </a>
+                  <i class="ri-arrow-drop-down-line ml-1 text-xl text-black group-hover:text-red-600"></i>
+                </li>
+
+                <li class="group flex items-center">
+                  <a href="#" class="text-[14px] font-[Poppins] text-black group-hover:text-red-600">
+                    Pages
+                  </a>
+                  <i class="ri-arrow-drop-down-line text-xl ml-1 text-black group-hover:text-red-600"></i>
+                </li>
+
+                <li>
+                  <a href="#" class="text-[14px] font-[Poppins] text-black  hover:text-red-600">About us</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-[14px] font-[Poppins] text-black  hover:text-red-600">Blog</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-[14px] font-[Poppins] text-black  hover:text-red-600">
+                    <i class="ri-coupon-3-line mr-1 text-xl"></i>Best Discount
+                  </a>
+                </li>
+              </ul>
+              <li class="ml-auto mr-[60px] text-[14px] font-[Poppins] text-black">
+                Recently viewed
+                <i class="ri-arrow-drop-down-line ml-1 text-black group-hover:text-red-600"></i>
+              </li>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
+  <main class="mt-[60px] flex justify-center gap-0 max-w-[2000px] mx-auto">
+    <!-- SOLDa: Swiper -->
+    <div class="swiper flex-1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide w-full">
+          <img class="w-full h-[700px] object-cover"
+            src="https://ph-test-11.slatic.net/p/dfcf87635a49a88390b82a2ee2dc493a.png" alt="">
+          <div class="absolute inset-0 flex flex-col justify-center px-16 text-white mt-[-100px] ml-[50px]">
+            <p class="text-lg mb-2 font-[Poppins] font-semibold">Limited time offer *</p>
+            <h2 class="text-5xl font-[Poppins] font-medium leading-tight mb-4">
+              From Italia<br> Sale 25% off <br> Armchairs!
+            </h2>
+            <a href="#"
+              class="inline-block max-w-[150px] text-center mt-[40px] bg-white text-black font-semibold px-6 py-3 rounded-md shadow hover:bg-transparent border border-white hover:text-white transition">
+              SHOP NOW
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide w-full">
+          <img class="w-full h-[700px] object-cover object-top-[80px]"
+            src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/09/slide2-demo1.jpg" alt="">
+          <div class="absolute inset-0 flex flex-col justify-center px-16 text-white mt-[-100px] ml-[40px]">
+            <p class="text-lg mb-2 font-[Poppins] font-semibold">Limited time offer *</p>
+            <h2 class="text-5xl font-[Poppins] font-semibold leading-tight mb-4">
+              Up To 20% <br> Instant Camera <br> Fujifilm's
+            </h2>
+            <a href="#"
+              class="inline-block max-w-[150px] text-center mt-[40px] bg-white text-black font-semibold px-6 py-3 rounded-md shadow hover:bg-transparent border border-white hover:text-white transition">
+              SHOP NOW
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide w-full ">
+          <img class="w-full h-[700px] object-cover object-[200px_0px] bg-red-500"
+            src="https://instax.eu/be/wp-content/uploads/sites/2/2023/05/square-sq40-feature-selfie-mode.png" alt="">
+          <div class="absolute inset-0 flex flex-col justify-center px-16 text-white mt-[-100px] ml-[40px]">
+            <p class="text-lg mb-2 font-[Poppins] font-semibold">Limited time offer *</p>
+            <h2 class="text-5xl font-[Poppins] font-semibold leading-tight mb-4">
+              Up To 20% <br> Instant Camera <br> Fujifilm's
+            </h2>
+            <a href="#"
+              class="inline-block max-w-[150px] text-center mt-[40px] bg-white text-black font-semibold px-6 py-3 rounded-md shadow hover:bg-transparent border border-white hover:text-white transition">
+              SHOP NOW
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- SAĞda: alt-üst 2 blok -->
+    <div class="flex flex-col gap-0 w-[700px]">
+
+  <!-- 1-ci blok -->
+  <div class="relative h-[350px] w-full bg-gray-200">
+    <img class="w-full h-full object-cover"
+      src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS4TOB4gIkGcNkHln4Xe7WH70sOaHv7eEHxTYZ6VyeFWMPs3qW7"
+      alt="Eyeshadow Image">
+
+    <!-- Yazı overlay -->
+    <div class="absolute inset-0 flex flex-col justify-center px-8 text-black">
+      <p class="text-sm uppercase font-semibold mb-2">Black Friday</p>
+      <h2 class="text-3xl font-bold leading-tight mb-3">Big Sale <br> Eyeshadow</h2>
+      <p class="text-sm mb-4">Over +100 items</p>
+      <a href="#"
+   class="inline-block w-full max-w-[120px] text-[13px] whitespace-nowrap bg-transparent text-black border border-black px-6 py-2 rounded-md font-bold hover:bg-black hover:text-white transition">
+   SHOP NOW
+</a>
+    </div>
+  </div>
+
+  <!-- 2-ci blok -->
+  <div class="relative h-[350px] w-full bg-gray-300">
+    <img class="w-full h-full object-cover"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnX7VRhwtbGSSqoTS7K4AXAod7mJVeD9PtXB8d4diQjAcsLuZ6"
+      alt="Jacket Image">
+
+    <!-- Yazı overlay -->
+    <div class="absolute inset-0 flex flex-col justify-center px-8 text-black">
+      <p class="text-sm uppercase font-semibold mb-2">New Collection</p>
+      <h2 class="text-3xl font-bold leading-tight mb-3">Puffer Jacket <br> 30% Off</h2>
+      <p class="text-sm mb-4">Best jacket in year</p>
+     <a href="#"
+   class="inline-block w-full max-w-[120px] text-[13px] whitespace-nowrap bg-transparent text-black border border-black px-6 py-2 rounded-md font-bold hover:bg-black hover:text-white transition">
+   SHOP NOW
+</a>
+
+    </div>
+  </div>
+
+</div>
+
+  </main>
+
 
   <!-- Dropdown JS -->
   <script>
@@ -195,6 +362,7 @@
   </script>
 
   <div id="app"></div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="module" src="/src/main.js"></script>
 
 </body>
