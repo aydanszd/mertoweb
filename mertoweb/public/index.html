@@ -1569,6 +1569,93 @@
       </div>
     </div>
   </section>
+  <div class="relative w-full max-w-7xl mx-auto group mt-[40px]">
+    <h1>From Our Blog</h1>
+  <!-- Slider wrapper -->
+  <div id="sliderTrack" class="flex overflow-hidden transition-transform duration-500">
+    
+    
+    <!-- Slide 1 -->
+    <div class="min-w-[33.33%] p-4">
+      <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-4.jpg" class="w-full rounded-lg" alt="">
+      <div class="mt-3">
+        <p class="text-sm text-gray-500">COSMETICS By Myoui Mina</p>
+        <h3 class="font-semibold mt-1">100% Pure & Natural Sage Essential Oil</h3>
+        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet...</p>
+        <button class="mt-2 px-3 py-1 border rounded-md text-sm">READ MORE</button>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="min-w-[33.33%] p-4">
+      <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-5-1.jpg" class="w-full rounded-lg" alt="">
+      <div class="mt-3">
+        <p class="text-sm text-gray-500">ELECTRONICS By Myoui Mina</p>
+        <h3 class="font-semibold mt-1">Tips for Cleaning Desktop & Laptop</h3>
+        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet...</p>
+        <button class="mt-2 px-3 py-1 border rounded-md text-sm">READ MORE</button>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="min-w-[33.33%] p-4">
+      <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-6.jpg" class="w-full rounded-lg" alt="">
+      <div class="mt-3">
+        <p class="text-sm text-gray-500">COSMETICS By Myoui Mina</p>
+        <h3 class="font-semibold mt-1">Giorgio Armani Sì Intense Eau de Parfum</h3>
+        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet...</p>
+        <button class="mt-2 px-3 py-1 border rounded-md text-sm">READ MORE</button>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="min-w-[33.33%] p-4">
+      <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-1.jpg" class="w-full rounded-lg" alt="">
+      <div class="mt-3">
+        <p class="text-sm text-gray-500">COSMETICS By Myoui Mina</p>
+        <h3 class="font-semibold mt-1">Giorgio Armani Sì Intense Eau de Parfum</h3>
+        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet...</p>
+        <button class="mt-2 px-3 py-1 border rounded-md text-sm">READ MORE</button>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="min-w-[33.33%] p-4">
+      <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-2.jpg" class="w-full rounded-lg" alt="">
+      <div class="mt-3">
+        <p class="text-sm text-gray-500">CATEGORY</p>
+        <h3 class="font-semibold mt-1">Product 5</h3>
+        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet...</p>
+        <button class="mt-2 px-3 py-1 border rounded-md text-sm">READ MORE</button>
+      </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="min-w-[33.33%] p-4">
+      <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-3.jpg" class="w-full rounded-lg" alt="">
+      <div class="mt-3">
+        <p class="text-sm text-gray-500">CATEGORY</p>
+        <h3 class="font-semibold mt-1">Product 6</h3>
+        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet...</p>
+        <button class="mt-2 px-3 py-1 border rounded-md text-sm">READ MORE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prev Button -->
+  <button id="btnPrev"
+    class="hidden group-hover:flex absolute top-1/2 -left-3 -translate-y-1/2 bg-white shadow p-2 rounded-full">
+    <i class="ri-arrow-left-wide-line"></i>
+  </button>
+
+  <!-- Next Button -->
+  <button id="btnNext"
+    class="hidden group-hover:flex absolute top-1/2 -right-3 -translate-y-1/2 bg-white shadow p-2 rounded-full">
+   <i class="ri-arrow-right-wide-fill"></i>
+  </button>
+</div>
+
+
 </body>
   <script>
     const flashSlider = document.getElementById("flash-slider");
@@ -1755,6 +1842,7 @@ setInterval(() => {
   </script>
 
   <div id="app"></div>
+  <script src="../src/js/sliderr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="module" src="/src/main.js"></script>
 

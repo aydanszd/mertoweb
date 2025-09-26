@@ -8,7 +8,7 @@ const products = [
         oldPrice: "$129",
     },
     {
-        img:"https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/09/slide-hoodie-4.png",
+        img: "https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/09/slide-hoodie-4.png",
         thumb: "https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/09/slide-hoodie-4.png",
         title: "Casual Oversized Streetwear",
         desc: "100% cotton • Do not bleach • Machine wash cold",
@@ -83,3 +83,32 @@ cardNext.addEventListener("click", nextProduct);
 cardPrev.addEventListener("click", prevProduct);
 
 renderProduct(currentIndex);
+
+const sliderTrack = document.getElementById("sliderTrack");
+const btnPrev = document.getElementById("btnPrev");
+const btnNext = document.getElementById("btnNext");
+
+const visibleSlides = 3; // eyni anda görünən slide sayı
+const slides = sliderTrack.children;
+const slideWidth = sliderTrack.clientWidth / visibleSlides; // 1 slide eni
+
+btnNext.addEventListener("click", () => {
+    // Əgər son slide-lara çatmışıqsa, ilk elementi sona əlavə et
+    if (sliderTrack.scrollLeft + sliderTrack.clientWidth >= sliderTrack.scrollWidth) {
+        sliderTrack.appendChild(slides[0]);
+        sliderTrack.scrollLeft -= slideWidth;
+    }
+    sliderTrack.scrollBy({ left: slideWidth, behavior: "smooth" });
+});
+
+btnPrev.addEventListener("click", () => {
+    // Əgər scroll başındayıqsa, son elementi başa əlavə et
+    if (sliderTrack.scrollLeft <= 0) {
+        sliderTrack.insertBefore(slides[slides.length - 1], slides[0]);
+        sliderTrack.scrollLeft += slideWidth;
+    }
+    sliderTrack.scrollBy({ left: -slideWidth, behavior: "smooth" });
+});
+
+
+
