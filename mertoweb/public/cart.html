@@ -31,7 +31,6 @@
                 </div>
                 <div class="col-span-12 sm:col-span-8 lg:col-span-8 xl:col-span-6 ">
                     <div class="flex items-center justify-center space-x-6">
-                        <!-- Contact -->
                         <div
                             class="hidden md:flex items-center space-x-1 text-black transform -translate-x-[20px] cursor-pointer hover:text-red-600">
                             <div class="p-2 rounded-full">
@@ -47,7 +46,6 @@
                         <div class="flex-1 max-w-6xl w-full bg-[#EBEEF0] rounded-[8px] transform -translate-x-[20px]">
                             <div class="flex rounded-md overflow-hidden">
 
-                                <!-- Category -->
                                 <button
                                     class="flex items-center gap-2 py-2 text-sm text-gray-700 hover:bg-gray-200 border-r ml-5">
                                     <span
@@ -56,7 +54,6 @@
                                     <i class="ri-arrow-down-s-line"></i>
                                 </button>
 
-                                <!-- Search -->
                                 <div class="relative flex-1">
                                     <input type="search" placeholder="Search for products"
                                         class="bg-[#EBEEF0] py-[18px] pl-4 pr-12 text-[16px] focus:outline-none w-[600px] ml-6" />
@@ -70,7 +67,6 @@
                     </div>
                 </div>
 
-                <!-- RIGHT: Lang, Currency, Account, Wishlist, Cart -->
                 <div
                     class="col-span-12 sm:col-span-12 lg:col-span-3 xl:col-span-4 flex items-center justify-end space-x-4 transform translate-x-[100px]">
                     <div class="relative" id="langWrap">
@@ -103,7 +99,6 @@
                         </ul>
                     </div>
 
-                    <!-- Valyuta -->
                     <div class="relative" id="currWrap">
                         <button id="currBtn" class="flex items-center space-x-2 px-2 py-2 rounded-md hover:bg-gray-50">
                             <span id="currBtnText" class="text-[15px]  text-black">USD</span>
@@ -120,13 +115,11 @@
                         </ul>
                     </div>
 
-                    <!-- Account -->
                     <a href="#" class="hidden sm:flex items-center space-x-2 text-[16px] text-black hover:text-red-600">
                         <i class="ri-user-line text-2xl"></i>
                         <span class="font-semibold">Account</span>
                     </a>
 
-                    <!-- Wishlist -->
                     <div class="flex items-center space-x-2">
                         <button class="p-2 rounded-full" aria-label="Wishlist">
                             <i class="ri-heart-line   hover:text-red-600 text-2xl text-black"></i>
@@ -138,12 +131,10 @@
                 </div>
             </div>
         </div>
-        <!-- Bottom Navigation -->
         <div class=" border-b h-[70px]">
             <div class="container mx-auto px-4">
                 <div class="flex items-center gap-6 py-3">
 
-                    <!-- Shop by categories button -->
                     <button
                         class="flex items-center gap-2 transform -translate-x-[120px] mt-5 rounded bg-white hover:shadow-sm">
                         <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -153,7 +144,6 @@
                         <span class="text-sm font-medium text-black">SHOP BY CATEGORIES</span>
                     </button>
 
-                    <!-- Nav links -->
                     <nav class="flex-1 overflow-x-auto mt-3 transform -translate-x-[70px]">
                         <ul class="flex items-center gap-[50px] whitespace-nowrap ">
                             <ul class="flex space-x-6">
@@ -217,7 +207,6 @@
     <main class="min-h-[50vh]">
         <div class="max-w-6xl mx-auto px-4 py-10">
 
-            <!-- Breadcrumb -->
             <nav class="text-sm text-gray-500 mb-3 mt-[50px] ml-[-130px]" aria-label="Breadcrumb">
                 <ol class="flex gap-2 items-center">
                     <li><a href="#" class="hover:underline">Home</a></li>
@@ -226,34 +215,147 @@
                 </ol>
             </nav>
 
-            <!-- Page title -->
             <h1 class="text-2xl font-semibold text-gray-900 mb-12 ml-[-130px]">Shopping Cart</h1>
 
-            <!-- Empty cart section -->
             <div class="flex justify-center">
                 <div class="flex flex-col items-center text-center space-y-5">
 
-                    <!-- Icon -->
                     <div class="relative">
                         <div class=" flex items-center justify-cente text-gray-300 ">
                             <i class="ri-shopping-cart-line text-[100px]"></i>
                         </div>
                     </div>
 
-                    <!-- Message -->
-                    <p class="text-black font-medium text-[18px] font-[Poppins] transform translate-y-[-20px]">Your cart is currently empty.</p>
+                    <p class="text-black font-medium text-[18px] font-[Poppins] transform translate-y-[-20px]">Your cart
+                        is currently empty.</p>
 
-                    <!-- Button -->
                     <a href="#"
                         class="inline-block transform translate-y-[-16px] px-8 py-3 bg-gray-900 text-white text-sm font-medium rounded-md shadow-sm hover:bg-red-600 transition">
                         RETURN TO SHOP
                     </a>
                 </div>
             </div>
-
         </div>
     </main>
+    <footer class="bg-[#1C1C1F] text-gray-200 mt-[280px]">
+        <div class="max-w-[1200px] mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/04/logo.png" alt="Merto"
+                        class="h-10 object-contain">
 
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="ri-map-pin-line text-xl mt-1"></i>
+                            <div>
+                                <p class="text-gray-300">29 SE 2nd Ave, Miami</p>
+                                <p class="text-gray-400 text-xs">Florida 33131, United States</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-mail-line text-xl"></i>
+                            <a href="mailto:info@example.com" class="text-gray-300 text-sm">info@example.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-phone-line text-xl"></i>
+                            <a href="tel:+9239427879" class="text-gray-300 font-medium">(+92) 3942 7879</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2 grid grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-3">SHOPPING</h4>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><a href="#" class="hover:text-red-500">Wishlist</a></li>
+                            <li><a href="#" class="hover:text-red-500">Shop by Brand</a></li>
+                            <li><a href="#" class="hover:text-red-500">Offers</a></li>
+                            <li><a href="#" class="hover:text-red-500">Track order</a></li>
+                            <li><a href="#" class="hover:text-red-500">Size Guide</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-semibold mb-3">INFORMATION</h4>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><a href="#" class="hover:text-red-500">Track Order</a></li>
+                            <li><a href="#" class="hover:text-red-500">Shipping & Returns</a></li>
+                            <li><a href="#" class="hover:text-red-500">About us</a></li>
+                            <li><a href="#" class="hover:text-red-500">Help</a></li>
+                            <li><a href="#" class="hover:text-red-500">Gift Cards</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-semibold mb-3">ACCOUNT</h4>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><a href="#" class="hover:text-red-500">Cart</a></li>
+                            <li><a href="#" class="hover:text-red-500">My account</a></li>
+                            <li><a href="#" class="hover:text-red-500">My orders</a></li>
+                            <li><a href="#" class="hover:text-red-500">Wishlist</a></li>
+                            <li><a href="#" class="hover:text-red-500">Affiliate Program</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-white font-semibold">Let's keep in touch</h4>
+
+                    <form class="flex items-center gap-2">
+                        <input type="email" placeholder="enter your email address"
+                            class="flex-1 bg-transparent border border-gray-700 rounded-md px-3 py-2 text-sm placeholder-gray-400 focus:outline-none focus:border-gray-500" />
+                        <button type="submit" class="bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded-md">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </form>
+
+                    <div class="flex items-center gap-3 mt-2">
+                        <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i
+                                class="ri-facebook-fill"></i></a>
+                        <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i class="ri-tiktok-line"></i></a>
+                        <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i class="ri-twitter-line"></i></a>
+                        <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i class="ri-youtube-line"></i></a>
+                        <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i
+                                class="ri-instagram-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="border border-gray-700 rounded-md p-4 flex items-center gap-4">
+                    <i class="ri-phone-line text-2xl"></i>
+                    <div>
+                        <p class="font-medium">Didn't find what you were looking for?</p>
+                        <a href="#" class="text-sm text-gray-300 hover:underline">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="border border-gray-700 rounded-md p-4 flex items-center gap-4">
+                    <i class="ri-question-line text-2xl"></i>
+                    <div>
+                        <p class="font-medium">How can we help you today?</p>
+                        <a href="#" class="text-sm text-gray-300 hover:underline">Help Center</a>
+                    </div>
+                </div>
+
+                <div class="border border-gray-700 rounded-md p-4 flex items-center gap-4">
+                    <i class="ri-chat-3-line text-2xl"></i>
+                    <div>
+                        <p class="font-medium">We'd love to hear what you think!</p>
+                        <a href="#" class="text-sm text-gray-300 hover:underline">Give Feedback</a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-gray-800 pt-6">
+                <p class="text-sm text-gray-400">Copyright © Merto. All Rights Reserved</p>
+
+                <div class="flex items-center gap-3">
+                    <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/04/payment-icons-1.png"
+                        alt="PayPal" class="h-8">
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
