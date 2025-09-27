@@ -232,56 +232,116 @@
             <section class="max-w-4xl mx-auto p-6 my-auto transform translate-x-[50px] mt-[70px]">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div class="flex flex-col items-center space-y-2">
-                        <span class="stat-number text-4xl md:text-5xl font-[Poppins] font-semibold text-black" data-target="25"
-                            data-suffix="">0</span>
+                        <span class="stat-number text-4xl md:text-5xl font-[Poppins] font-semibold text-black"
+                            data-target="25" data-suffix="">0</span>
                         <p class="text-sm md:text-base text-gray-500">showrooms around the world</p>
                     </div>
 
                     <div class="flex flex-col items-center space-y-2">
-                        <span class="stat-number text-4xl md:text-5xl font-[Poppins] font-semibold text-black" data-target="200"
-                            data-suffix="+">0</span>
+                        <span class="stat-number text-4xl md:text-5xl font-[Poppins] font-semibold text-black"
+                            data-target="200" data-suffix="+">0</span>
                         <p class="text-sm md:text-base text-gray-500">items of clothing sold annually</p>
                     </div>
 
                     <div class="flex flex-col items-center space-y-2">
-                        <span class="stat-number text-4xl md:text-5xl font-[Poppins] font-semibold text-black" data-target="100"
-                            data-suffix="+">0</span>
+                        <span class="stat-number text-4xl md:text-5xl font-[Poppins] font-semibold text-black"
+                            data-target="100" data-suffix="+">0</span>
                         <p class="text-sm md:text-base text-gray-500">customers recommend our brand to their friends</p>
                     </div>
 
                     <div class="flex flex-col items-center space-y-2">
-                        <span class="stat-number text-4xl md:text-5xl font-[Poppins] font-semibold text-black" data-target="99"
-                            data-suffix="%">0</span>
+                        <span class="stat-number text-4xl md:text-5xl font-[Poppins] font-semibold text-black"
+                            data-target="99" data-suffix="%">0</span>
                         <p class="text-sm md:text-base text-gray-500">satisfaction rate</p>
                     </div>
             </section>
-            <section class="max-w-6xl h-[500px] border">
-               
-            </section>
-            <script>
-                function animateValue(el, start, end, duration, suffix) {
-                    let startTime = null;
-                    const step = (t) => {
-                        if (!startTime) startTime = t;
-                        const progress = Math.min((t - startTime) / duration, 1);
-                        const current = Math.floor(progress * (end - start) + start);
-                        el.textContent = current + (suffix || '');
-                        if (progress < 1) requestAnimationFrame(step);
-                    };
-                    requestAnimationFrame(step);
-                }
-
-                document.addEventListener('DOMContentLoaded', () => {
-                    document.querySelectorAll('.stat-number').forEach(el => {
-                        const end = parseFloat(el.dataset.target);
-                        const suffix = el.dataset.suffix || '';
-                        animateValue(el, 0, end, 1500, suffix);
-                    });
-                });
-            </script>
+    </main>
+    <section class="max-w-[1300px] h-[450px] mx-auto border border-black flex items-center mt-[40px]">
+        <div class="w-1/2 p-8 mt-[-100px]">
+            <i class="ri-todo-line text-[60px] relative top-[50px] ml-[20px] text-gray-400"></i>
+            <h2 class="text-3xl font-bold mb-4 ml-[80px]">Our Mission</h2>
+            <p class="text-black leading-relaxed w-[440px] ml-[80px]">
+                As part of the TenTen Group, our mission is to make it easy to do business anywhere.<br>
+                We do this by giving suppliers the tools necessary to reach a global audience for their products,
+                and by helping buyers find products and suppliers quickly and efficiently.
+            </p>
 
         </div>
-    </main>
+        <div class="w-1/2 h-[400px] ml-[-50px] ">
+            <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/04/about-1.jpg" alt=""
+                class="w-full h-full object-cover rounded-[6px] ml-2">
+        </div>
+    </section>
+    <section class="max-w-6xl mx-auto px-6 py-16">
+    <div class="text-center max-w-3xl mx-auto">
+        <h1 class="font-semibold font-[Poppins] text-[35px] mx-auto text-center w-[500px]">
+            We enable innovation. From ideation all the way through to market delivery.
+        </h1>
+    </div>
+
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 text-center max-w-4xl mx-auto">
+            <div>
+                <i class="ri-truck-line text-5xl text-gray-400"></i>
+                <h4 class="mt-3 font-semibold font-[Poppins] text-slate-900">Fast, Free Shipping</h4>
+                <p class="mt-1 text-sm text-slate-500 font-[Poppins]">On order over $50</p>
+            </div>
+            <div>
+                <i class="ri-timer-flash-line text-5xl text-gray-400"></i>
+                <h4 class="mt-3 font-semibold text-slate-900 font-[Poppins]">Next Day Delivery</h4>
+                <p class="mt-1 text-sm text-slate-500 font-[Poppins]">Free – spend over $99</p>
+            </div>
+            <div>
+                <i class="ri-price-tag-3-line text-5xl text-gray-400"></i>
+                <h4 class="mt-3 font-semibold text-slate-900 font-[Poppins]">Low Price Guarantee</h4>
+                <p class="mt-1 text-sm text-slate-500 font-[Poppins]">We offer competitive prices</p>
+            </div>
+            <div>
+                <i class="ri-thumb-up-line text-5xl text-gray-400"></i>
+                <h4 class="mt-3 font-semibold text-slate-900 font-[Poppins]">Satisfaction Guarantee</h4>
+                <p class="mt-1 text-sm text-slate-500 font-[Poppins]">We Guarantee Our</p>
+            </div>
+        </div>
+        <div class="mt-8 text-center">
+            <h2 class="text-[6rem] md:text-[12rem] font-extrabold tracking-tight text-transparent select-none"
+                style="-webkit-text-stroke: 2px rgba(0,0,0,0.8);">
+                ALL WORLD
+            </h2>
+        </div>
+        <div class=" text-center">
+            <h3 class=" md:text-[38px] font-semibold font-[Poppins]">Anytime, Anywhere</h3>
+            <p class="mt-4 max-w-[840px] mx-auto text-[14px] md:text-base text-gray-700">
+                As a platform, we continue to develop services to help businesses do more and discover new
+                opportunities.
+                Whether it's sourcing from your mobile phone or contacting suppliers in their local language,
+                turn to tenten.com for all your global business needs.
+            </p>
+        </div>
+    </section>
+
+
+    <script>
+        function animateValue(el, start, end, duration, suffix) {
+            let startTime = null;
+            const step = (t) => {
+                if (!startTime) startTime = t;
+                const progress = Math.min((t - startTime) / duration, 1);
+                const current = Math.floor(progress * (end - start) + start);
+                el.textContent = current + (suffix || '');
+                if (progress < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.stat-number').forEach(el => {
+                const end = parseFloat(el.dataset.target);
+                const suffix = el.dataset.suffix || '';
+                animateValue(el, 0, end, 1500, suffix);
+            });
+        });
+    </script>
+
+    </div>
 
 </body>
 
