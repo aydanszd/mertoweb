@@ -1,47 +1,34 @@
-<!doctype html>
+<!Doctype html>
 <html lang="az">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Merto — Header</title>
-
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Remix Icon -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <!-- Sənin CSS -->
   <link rel="stylesheet" href="./src/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Story+Script&display=swap"
     rel="stylesheet">
-  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
   <script defer type="module" src="../src/js/swipper.js"> </script>
   <script defer type="module" src="../src/js/slider.js"></script>
 </head>
-
 <body class="bg-gray-50">
-  <!-- ================= HEADER ================= -->
   <header class=" border-b h-[100px] ">
     <div class="container mx-auto px-0 mt-5">
       <div class="grid grid-cols-12 items-center gap-4 py-4">
 
-        <!-- LEFT: Logo -->
         <div class="col-span-12 sm:col-span-4 lg:col-span-3 xl:col-span-2 flex items-center ml-[-100px]">
           <a href="#" class="inline-block">
             <img src="https://merto-be87.kxcdn.com/merto/wp-content/themes/merto/images/logo.png" alt="Merto"
               class="h-11 w-auto">
           </a>
         </div>
-
-        <!-- CENTER: Contact + Category + Search -->
         <div class="col-span-12 sm:col-span-8 lg:col-span-8 xl:col-span-6 ">
           <div class="flex items-center justify-center space-x-6">
-
             <!-- Contact -->
             <div
               class="hidden md:flex items-center space-x-1 text-black transform -translate-x-[20px] cursor-pointer hover:text-red-600">
@@ -81,7 +68,6 @@
         <!-- RIGHT: Lang, Currency, Account, Wishlist, Cart -->
         <div
           class="col-span-12 sm:col-span-12 lg:col-span-3 xl:col-span-4 flex items-center justify-end space-x-4 transform translate-x-[100px]">
-          <!-- Dil seçimi -->
           <div class="relative" id="langWrap">
             <button id="langBtn"
               class="flex transform translate-x-5 items-center space-x-1 px-3 py-2 rounded-md hover:bg-gray-50">
@@ -208,7 +194,7 @@
     </div>
   </header>
   <main class="mt-[60px] flex justify-center gap-0 max-w-[2000px] mx-auto">
-    <!-- SOLDa: Swiper -->
+    <!--  Swiper -->
     <div class="swiper flex-1">
       <div class="swiper-wrapper">
         <div class="swiper-slide w-full">
@@ -251,22 +237,17 @@
               class="inline-block max-w-[150px] text-center mt-[40px] bg-white text-black font-semibold px-6 py-3 rounded-md shadow hover:bg-transparent border border-white hover:text-white transition">
               SHOP NOW
             </a>
-
           </div>
         </div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
-    <!-- SAĞda: alt-üst 2 blok -->
     <div class="flex flex-col gap-0 w-[700px]">
-
       <!-- 1-ci blok -->
       <div class="relative h-[350px] w-full bg-gray-200">
         <img class="w-full h-full object-cover"
           src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS4TOB4gIkGcNkHln4Xe7WH70sOaHv7eEHxTYZ6VyeFWMPs3qW7"
           alt="Eyeshadow Image">
-
-        <!-- Yazı overlay -->
         <div class="absolute inset-0 flex flex-col justify-center px-8 text-black">
           <p class="text-sm uppercase font-semibold mb-2">Black Friday</p>
           <h2 class="text-3xl font-bold leading-tight mb-3">Big Sale <br> Eyeshadow</h2>
@@ -283,8 +264,6 @@
         <img class="w-full h-full object-cover"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnX7VRhwtbGSSqoTS7K4AXAod7mJVeD9PtXB8d4diQjAcsLuZ6"
           alt="Jacket Image">
-
-        <!-- Yazı overlay -->
         <div class="absolute inset-0 flex flex-col justify-center px-8 text-black">
           <p class="text-sm uppercase font-semibold mb-2">New Collection</p>
           <h2 class="text-3xl font-bold leading-tight mb-3">Puffer Jacket <br> 30% Off</h2>
@@ -435,27 +414,30 @@
     </div>
   </section>
   <section class="max-w-7xl mx-auto px-6 py-10 group relative">
-    <div class="flex items-center justify-between mb-6">
-      <h2 class="text-2xl font-semibold">Flash Deals</h2>
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-[30px] font-semibold font-[Poppins]">Flash Deals</h2>
 
       <div class="flex items-center space-x-6">
         <!-- countdown -->
         <div class="flex items-center space-x-3">
-          <span class="text-sm text-gray-500">Ends in</span>
-          <div id="countdown" class="flex items-center space-x-2">
-            <div class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center text-xs">01</div>
-            <div class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center text-xs">16</div>
-            <div class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center text-xs">19</div>
-          </div>
-        </div>
+  <span class="text-sm text-gray-500">Ends in</span>
 
-        <a href="#" class="text-sm text-gray-500 hover:text-gray-900">See All Products</a>
-      </div>
+  <div id="countdown" class="flex items-center space-x-2">
+    <div class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center text-xs">01</div>
+
+    <span class="text-gray-800 font-bold">:</span>
+
+    <div class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center text-xs">16</div>
+
+    <span class="text-gray-800 font-bold">:</span>
+
+    <div class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center text-xs">19</div>
+  </div>
+    <a href="#" class="text-sm text-gray-500 hover:text-gray-900">See All Products</a>
+</div>
+</div>
     </div>
-
-    <!-- slider wrapper -->
     <div class="relative">
-      <!-- arrows -->
       <button id="prev" aria-label="Previous"
         class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow rounded-full p-2 hidden md:flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
         <i class="ri-arrow-left-s-line text-2xl"></i>
@@ -701,9 +683,6 @@
             </div>
           </article>
 
-
-          <!-- === Card 7 === -->
-          <!-- === Card 1 === -->
           <article class="relative group/item w-1/5 flex-shrink-0 bg-white border p-4 snap-child">
             <div class="h-56 flex items-center justify-center">
               <img
@@ -778,7 +757,6 @@
           </article>
         </div>
       </div>
-      <!-- dots -->
       <div id="dots" class="mt-4 flex items-center justify-center gap-2"></div>
     </div>
   </section>
@@ -822,11 +800,8 @@
   </div>
   <section class="py-10 flex justify-center">
     <div class="max-w-7xl w-full">
-      <h2 class="text-2xl font-semibold mb-6">New arrivals</h2>
-
-      <!-- Head hissəsində Remix Icon CDN -->
+      <h2 class="text-[30px] font-semibold font-[Poppins] mb-6">New arrivals</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 bg-white">
-
         <!-- Product Card 1 -->
         <div
           class="relative group border p-4 transition-all duration-300 flex gap-4 h-[240px] hover:h-[260px] hover:shadow-lg">
@@ -877,7 +852,6 @@
             </div>
           </div>
         </div>
-
 
         <!-- Product Card 2 -->
         <div
@@ -930,8 +904,6 @@
           </div>
         </div>
 
-
-        <!-- Product Card 3 -->
         <div
           class="relative group border p-4 transition-all duration-300 flex gap-4 h-[240px] hover:h-[260px] hover:shadow-lg">
           <!-- Product Image -->
@@ -984,11 +956,9 @@
 
         <div
           class="relative group border p-4 transition-all duration-300 flex gap-4 h-[240px] hover:h-[260px] hover:shadow-lg">
-          <!-- Product Image -->
           <img src="https://demothemesky-be87.kxcdn.com/merto/wp-content/uploads/2024/05/fashion-16-300x300.jpg"
             alt="Product 1" class="w-40 h-44 object-contain rounded-md">
 
-          <!-- Info -->
           <div class="flex flex-col justify-between">
             <h3 class="text-gray-800 font-[Poppins] font-medium translate-y-[40px]">
               Nike Air Max Unisex SYSTM Shoes men snacker shoes
@@ -1003,18 +973,15 @@
             </div>
           </div>
 
-          <!-- Hover Buttons -->
           <div class="absolute bottom-4 left-1/2 -translate-x-1/2
             flex flex-row items-center gap-2
             opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 
-            <!-- Add to Cart -->
             <button
               class="bg-gray-200 text-black font-[Poppins] font-medium px-[80px] py-[8px] text-sm rounded-md hover:bg-black hover:text-white whitespace-nowrap">
               + ADD TO CART
             </button>
 
-            <!-- Icons -->
             <div class="flex gap-1 ">
               <button
                 class="w-10 h-10 text-black text-[18px] rounded-[6px] borde  bg-gray-200 border-gray-300 flex items-center justify-center hover:bg-black hover:text-white">
@@ -1034,11 +1001,8 @@
 
         <div
           class="relative group border p-4 transition-all duration-300 flex gap-4 h-[240px] hover:h-[260px] hover:shadow-lg">
-          <!-- Product Image -->
           <img src="https://demothemesky-be87.kxcdn.com/merto/wp-content/uploads/2024/05/fashion-1-300x300.jpg"
             alt="Product 1" class="w-40 h-44 object-contain rounded-md">
-
-          <!-- Info -->
           <div class="flex flex-col justify-between">
             <h3 class="text-gray-800 font-[Poppins] font-medium translate-y-[40px]">
               Nike Air Max Unisex SYSTM Shoes men snacker shoes
@@ -1053,18 +1017,15 @@
             </div>
           </div>
 
-          <!-- Hover Buttons -->
           <div class="absolute bottom-4 left-1/2 -translate-x-1/2
             flex flex-row items-center gap-2
             opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 
-            <!-- Add to Cart -->
             <button
               class="bg-gray-200 text-black font-[Poppins] font-medium px-[80px] py-[8px] text-sm rounded-md hover:bg-black hover:text-white whitespace-nowrap">
               + ADD TO CART
             </button>
 
-            <!-- Icons -->
             <div class="flex gap-1 ">
               <button
                 class="w-10 h-10 text-black text-[18px] rounded-[6px] borde  bg-gray-200 border-gray-300 flex items-center justify-center hover:bg-black hover:text-white">
@@ -1081,14 +1042,11 @@
             </div>
           </div>
         </div>
-        <!-- Head hissəsində Remix Icon linki -->
         <div
           class="relative group border p-4 transition-all duration-300 flex gap-4 h-[240px] hover:h-[260px] hover:shadow-lg">
-          <!-- Product Image -->
           <img src="https://demothemesky-be87.kxcdn.com/merto/wp-content/uploads/2024/05/fashion-3-300x300.jpg"
             alt="Product 1" class="w-40 h-44 object-contain rounded-md">
 
-          <!-- Info -->
           <div class="flex flex-col justify-between">
             <h3 class="text-gray-800 font-[Poppins] font-medium translate-y-[40px]">
               Nike Air Max Unisex SYSTM Shoes men snacker shoes
@@ -1103,18 +1061,14 @@
             </div>
           </div>
 
-          <!-- Hover Buttons -->
           <div class="absolute bottom-4 left-1/2 -translate-x-1/2
             flex flex-row items-center gap-2
             opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 
-            <!-- Add to Cart -->
             <button
               class="bg-gray-200 text-black font-[Poppins] font-medium px-[80px] py-[8px] text-sm rounded-md hover:bg-black hover:text-white whitespace-nowrap">
               + ADD TO CART
             </button>
-
-            <!-- Icons -->
             <div class="flex gap-1 ">
               <button
                 class="w-10 h-10 text-black text-[18px] rounded-[6px] borde  bg-gray-200 border-gray-300 flex items-center justify-center hover:bg-black hover:text-white">
@@ -1147,7 +1101,6 @@
             H o o d i e</h1>
         </div>
         <div class="absolute inline-block">
-          <!-- Dairə badge -->
           <div class="absolute mt-[-160px] ml-[320px]">
             <div class="discount-badge w-20 h-20 rounded-full bg-red-600
                 flex items-center justify-center text-white font-semibold text-2xl font-[Poppins] shadow-lg">
@@ -1157,7 +1110,6 @@
         </div>
 
         <style>
-          /* perspektiv veririk ki translateZ işləsin */
           .perspective {
             perspective: 400px;
           }
@@ -1176,7 +1128,6 @@
               transform: translateZ(40px) scale(1.10);
             }
 
-            /* qabağa yaxınlaşır */
             100% {
               transform: translateZ(0) scale(1);
             }
@@ -1203,10 +1154,7 @@
             <div class="text-2xl font-bold mt-5 ml-6" id="productPrice"></div>
             <div class="text-xl mt-5 line-through text-gray-400" id="productOldPrice"></div>
           </div>
-
-          <!-- Thumbnail-lər -->
           <div class="flex items-center gap-3 mb-6 ml-5" id="thumbsContainer"></div>
-
           <!-- Sağdakı oxlar -->
           <div class="flex items-center justify-between">
             <button id="cardPrev" class=""></button>
@@ -1218,7 +1166,6 @@
         </div>
       </div>
 
-      <!-- Carousel oxları: bütün konteynerin üzərində -->
       <button id="prevBtn" class="absolute -left-[150px] top-1/2 -translate-y-1/2 flex items-center justify-center w-12 h-12 rounded-full z-10
           opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-gray-400" fill="none" viewBox="0 0 24 24"
@@ -1236,17 +1183,16 @@
       </button>
     </div>
   </section>
-<section class="max-w-7xl mx-auto px-6 py-10 group relative">
-    <div class="flex items-center justify-between mb-4">
-      <h2 class="text-2xl font-semibold mt-[50px]">Best Selling</h2>
+<section class="max-w-7xl mx-auto px-6 py-10 group relative mt-[-60px]">
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="text-[30px] font-semibold font-[Poppins] mt-[100px]">Best Selling</h2>
 
-        <a href="#" class="text-sm text-gray-500 hover:text-gray-900 mt-[30px]">See All Products</a>
+        <a href="#" class="text-sm text-gray-500 hover:text-gray-900 mt-[100px] ">See All Products</a>
       </div>
     </div>
 
     <!-- slider wrapper -->
     <div class="relative">
-      <!-- arrows -->
       <button id="prevbest" aria-label="Previous"
         class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow rounded-full p-2 hidden md:flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
         <i class="ri-arrow-left-s-line text-2xl"></i>
@@ -1256,7 +1202,6 @@
         <i class="ri-arrow-right-s-line text-2xl"></i>
       </button>
 
-      <!-- viewport -->
       <div id="flashbest-slider" class=" no-scrollbar snap-x snap-mandatory scroll-smooth overflow-hidden">
         <div class="flex py-4">
 
@@ -1375,7 +1320,6 @@
             </div>
           </article>
 
-
           <!-- === Card 4 === -->
           <article class="relative group/item w-1/5 flex-shrink-0 bg-white border p-4 snap-child">
             <div class="h-56 flex items-center justify-center">
@@ -1413,7 +1357,6 @@
               </button>
             </div>
           </article>
-
 
           <!-- === Card 5 === -->
           <article class="relative group/item w-1/5 flex-shrink-0 bg-white border p-4 snap-child">
@@ -1569,12 +1512,9 @@
       </div>
     </div>
   </section>
-  <div class="relative w-full max-w-7xl mx-auto group mt-[40px]">
-    <h1>From Our Blog</h1>
-  <!-- Slider wrapper -->
-  <div id="sliderTrack" class="flex overflow-hidden transition-transform duration-500">
-    
-    
+  <div class="relative w-full max-w-7xl mx-auto group mt-[-90px]">
+    <h1 class="text-[26px] font-semibold font-[Poppins] mt-[100px] ml-4">From Our Blog</h1>
+  <div id="sliderTrack" class="flex overflow-hidden transition-transform duration-500 mt-[10px]">
     <!-- Slide 1 -->
     <div class="min-w-[33.33%] p-4">
       <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-4.jpg" class="w-full rounded-lg" alt="">
@@ -1656,12 +1596,10 @@
 </div>
 <section class="py-20 bg-gray-200 mt-[80px]">
   <div class="max-w-4xl mx-auto text-center px-4">
-    <!-- Title -->
     <h1 class="text-[14px] sm:text-3xl font-semibold tracking-tight mb-8 text-black font-[Poppins]">
       Looking for something else?
     </h1>
 
-    <!-- Search box -->
     <form class="mx-auto max-w-2xl">
       <div class="relative">
         <input
@@ -1675,7 +1613,6 @@
           aria-label="Search"
           class="absolute right-1 font-semibold top-1/2 -translate-y-1/2 h-11 w-11 rounded-md bg-black text-white flex items-center justify-center shadow hover:bg-red-700"
         >
-          <!-- search icon -->
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -1685,7 +1622,6 @@
       </div>
     </form>
 
-    <!-- Tags / categories -->
     <div class="mt-8 flex flex-wrap justify-center gap-4 text-sm text-gray-600 w-[600px] mx-auto">
   <a href="#" class="after:content-['|'] after:mx-2 last:after:content-[''] hover:text-red-600">smartphone</a>
   <a href="#" class="after:content-['|'] after:mx-2 last:after:content-[''] hover:text-red-600">tablet</a>
@@ -1703,9 +1639,7 @@
 <footer class="bg-[#1C1C1F] text-gray-200 mt-0">
   <div class="max-w-[1200px] mx-auto px-6 py-12">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <!-- Left: Logo + contact -->
       <div class="space-y-4">
-        <!-- Logo (Merto img) -->
         <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/04/logo.png" alt="Merto" class="h-10 object-contain">
 
         <ul class="space-y-3 text-sm">
@@ -1726,8 +1660,6 @@
           </li>
         </ul>
       </div>
-
-      <!-- Middle columns: Shopping / Information / Account -->
       <div class="md:col-span-2 grid grid-cols-3 gap-6">
         <div>
           <h4 class="text-white font-semibold mb-3">SHOPPING</h4>
@@ -1763,7 +1695,6 @@
         </div>
       </div>
 
-      <!-- Right: Newsletter + Social -->
       <div class="space-y-4">
         <h4 class="text-white font-semibold">Let's keep in touch</h4>
 
@@ -1776,7 +1707,6 @@
         </form>
 
         <div class="flex items-center gap-3 mt-2">
-          <!-- Social icons (RemixIcon) -->
           <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i class="ri-facebook-fill"></i></a>
           <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i class="ri-tiktok-line"></i></a>
           <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i class="ri-twitter-line"></i></a>
@@ -1785,8 +1715,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Middle CTA Boxes -->
     <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
       <div class="border border-gray-700 rounded-md p-4 flex items-center gap-4">
         <i class="ri-phone-line text-2xl"></i>
@@ -1813,19 +1741,15 @@
       </div>
     </div>
 
-    <!-- Bottom: copyright + payment icons -->
     <div class="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-gray-800 pt-6">
       <p class="text-sm text-gray-400">Copyright © Merto. All Rights Reserved</p>
 
       <div class="flex items-center gap-3">
-        <!-- Placeholder payment icons (use actual images if lazımsa) -->
         <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/04/payment-icons-1.png" alt="PayPal" class="h-8">
       </div>
     </div>
   </div>
 </footer>
-
-
 </body>
   <script>
     const flashSlider = document.getElementById("flash-slider");
@@ -1882,36 +1806,34 @@ setInterval(() => {
   sliderContainer.scrollBy({ left: -cardWidth, behavior: "auto" });
 }, 100000);
 </script>
+    <!-- // Countdown timer for Flash Deals -->
   <script>
-    // Countdown timer for Flash Deals
-    const countdown = document.getElementById('countdown');
-    let hours = 1, minutes = 16, seconds = 19;
+const countdown = document.getElementById('countdown');
+const hourBox   = countdown.querySelectorAll('div')[0];
+const minuteBox = countdown.querySelectorAll('div')[1];
+const secondBox = countdown.querySelectorAll('div')[2];
+let hours = 1, minutes = 16, seconds = 19;
+function updateCountdown() {
+  seconds--;
+  if (seconds < 0) {
+    seconds = 59;
+    minutes--;
+  }
+  if (minutes < 0) {
+    minutes = 59;
+    hours--;
+  }
+  if (hours < 0) {
+    hours = 0; minutes = 0; seconds = 0;
+  }
 
-    function updateCountdown() {
-      seconds--;
-      if (seconds < 0) {
-        seconds = 59;
-        minutes--;
-      }
-      if (minutes < 0) {
-        minutes = 59;
-        hours--;
-      }
-      if (hours < 0) {
-        hours = 0; minutes = 0; seconds = 0;
-      }
-      const time = [hours, minutes, seconds].map(v => String(v).padStart(2, '0'));
-      if (countdown) {
-        countdown.children[0].textContent = time[0];
-        countdown.children[1].textContent = time[1];
-        countdown.children[2].textContent = time[2];
-      }
-    }
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
-
-
+  hourBox.textContent   = String(hours).padStart(2, '0');
+  minuteBox.textContent = String(minutes).padStart(2, '0');
+  secondBox.textContent = String(seconds).padStart(2, '0');
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
   <style>
     .slider-track {
       display: flex;
@@ -1931,7 +1853,6 @@ setInterval(() => {
       display: block;
     }
 
-    /* Hide horizontal scrollbar for flash-slider */
     #flash-slider {
       scrollbar-width: none;
     }
@@ -1949,8 +1870,6 @@ setInterval(() => {
       slider.appendChild(first);
     }, 100000); 
   </script>
-
-
   <!-- Dropdown JS -->
   <script>
     (function () {
@@ -2002,8 +1921,6 @@ setInterval(() => {
       });
     })();
   </script>
-
-  <!-- Axios nümunəsi -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
     axios.get('https://jsonplaceholder.typicode.com/posts/1')
