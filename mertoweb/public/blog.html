@@ -1,0 +1,366 @@
+<!Doctype html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Merto — Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Story+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script defer type="module" src="../src/js/swipper.js"> </script>
+    <script defer type="module" src="../src/js/slider.js"></script>
+</head>
+
+<body class="bg-gray-50">
+    <header class=" border-b h-[100px] ">
+        <div class="container mx-auto px-0 mt-5">
+            <div class="grid grid-cols-12 items-center gap-4 py-4">
+
+                <div class="col-span-12 sm:col-span-4 lg:col-span-3 xl:col-span-2 flex items-center ml-[-100px]">
+                    <a href="#" class="inline-block">
+                        <img src="https://merto-be87.kxcdn.com/merto/wp-content/themes/merto/images/logo.png"
+                            alt="Merto" class="h-11 w-auto">
+                    </a>
+                </div>
+                <div class="col-span-12 sm:col-span-8 lg:col-span-8 xl:col-span-6 ">
+                    <div class="flex items-center justify-center space-x-6">
+                        <div
+                            class="hidden md:flex items-center space-x-1 text-black transform -translate-x-[20px] cursor-pointer hover:text-red-600">
+                            <div class="p-2 rounded-full">
+                                <i class="ri-phone-line text-4xl"></i>
+                            </div>
+                            <div class="text-[15px] w-[130px]  hover:text-red-600 ">
+                                <div class="text-xs text-black font-[Poppins]  hover:text-red-600 cursor-pointer">
+                                    Contact us 24/7</div>
+                                <div class="font-[Poppins] font-semibold">(+92) 3942 7879</div>
+                            </div>
+                        </div>
+
+                        <div class="flex-1 max-w-6xl w-full bg-[#EBEEF0] rounded-[8px] transform -translate-x-[20px]">
+                            <div class="flex rounded-md overflow-hidden">
+
+                                <button
+                                    class="flex items-center gap-2 py-2 text-sm text-gray-700 hover:bg-gray-200 border-r ml-5">
+                                    <span
+                                        class="whitespace-nowrap text-black font-[Poppins] font-medium text-[14px]">All
+                                        Categories</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+
+                                <div class="relative flex-1">
+                                    <input type="search" placeholder="Search for products"
+                                        class="bg-[#EBEEF0] py-[18px] pl-4 pr-12 text-[16px] focus:outline-none w-[600px] ml-6" />
+                                    <button
+                                        class="absolute right-1 mr-2 top-1/2 -translate-y-1/2 h-[44px] w-[48px] flex items-center justify-center rounded-md bg-gray-900 text-white">
+                                        <i class="ri-search-line text-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="col-span-12 sm:col-span-12 lg:col-span-3 xl:col-span-4 flex items-center justify-end space-x-4 transform translate-x-[100px]">
+                    <div class="relative" id="langWrap">
+                        <button id="langBtn"
+                            class="flex transform translate-x-5 items-center space-x-1 px-3 py-2 rounded-md hover:bg-gray-50">
+                            <img id="langBtnImg"
+                                src="https://merto-be87.kxcdn.com/merto/wp-content/plugins/themesky-demo/images/flags/english.png"
+                                alt="lang" class="w-4 h-3 rounded-sm object-cover">
+                            <span id="langBtnText" class="text-[15px] text-black">English</span>
+                            <i class="ri-arrow-down-s-line ml-1"></i>
+                        </button>
+                        <ul id="langDropdown"
+                            class="absolute right-0 mt-2 w-44 bg-white rounded-md shadow-lg py-1 hidden z-20">
+                            <li><button class="w-full text-left px-3 py-2 hover:bg-gray-50 flex items-center space-x-2"
+                                    data-lang="en"
+                                    data-src="https://merto-be87.kxcdn.com/merto/wp-content/plugins/themesky-demo/images/flags/espanol.png"><img
+                                        src="https://merto-be87.kxcdn.com/merto/wp-content/plugins/themesky-demo/images/flags/espanol.png"
+                                        class="w-5 h-5 rounded-sm" alt="US"><span
+                                        class="text-sm">English</span></button></li>
+                            <li><button class="w-full text-left px-3 py-2 hover:bg-gray-50 flex items-center space-x-2"
+                                    data-lang="az" data-src="/images/flags/az.svg"><img
+                                        src="https://merto-be87.kxcdn.com/merto/wp-content/plugins/themesky-demo/images/flags/francais.png"
+                                        class="w-5 h-5 rounded-sm" alt="AZ"><span
+                                        class="text-sm">Azərbaycan</span></button></li>
+                            <li><button class="w-full text-left px-3 py-2 hover:bg-gray-50 flex items-center space-x-2"
+                                    data-lang="tr" data-src="/images/flags/tr.svg"><img
+                                        src="https://merto-be87.kxcdn.com/merto/wp-content/plugins/themesky-demo/images/flags/portugues.png"
+                                        class="w-5 h-5 rounded-sm" alt="TR"><span class="text-sm">Türkçe</span></button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="relative" id="currWrap">
+                        <button id="currBtn" class="flex items-center space-x-2 px-2 py-2 rounded-md hover:bg-gray-50">
+                            <span id="currBtnText" class="text-[15px]  text-black">USD</span>
+                            <i class="ri-arrow-down-s-line ml-1"></i>
+                        </button>
+                        <ul id="currDropdown"
+                            class="absolute right-0 mt-2 w-32 bg-white border rounded-md shadow-lg py-1 hidden z-20">
+                            <li><button class="w-full text-left px-3 py-2 hover:bg-gray-50" data-curr="USD">USD</button>
+                            </li>
+                            <li><button class="w-full text-left px-3 py-2 hover:bg-gray-50" data-curr="AZN">AZN</button>
+                            </li>
+                            <li><button class="w-full text-left px-3 py-2 hover:bg-gray-50" data-curr="EUR">EUR</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#" class="hidden sm:flex items-center space-x-2 text-[16px] text-black hover:text-red-600">
+                        <i class="ri-user-line text-2xl"></i>
+                        <span class="font-semibold">Account</span>
+                    </a>
+
+                    <div class="flex items-center space-x-2">
+                        <button class="p-2 rounded-full" aria-label="Wishlist">
+                            <i class="ri-heart-line   hover:text-red-600 text-2xl text-black"></i>
+                        </button>
+                        <button class="relative p-2 rounded-full  hover:text-red-600" aria-label="Cart">
+                            <i class="ri-shopping-cart-line text-2xl text-black  hover:text-red-600"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" border-b h-[70px]">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center gap-6 py-3">
+
+                    <button
+                        class="flex items-center gap-2 transform -translate-x-[120px] mt-5 rounded bg-white hover:shadow-sm">
+                        <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <span class="text-sm font-medium text-black">SHOP BY CATEGORIES</span>
+                    </button>
+
+                    <nav class="flex-1 overflow-x-auto mt-3 transform -translate-x-[70px]">
+                        <ul class="flex items-center gap-[50px] whitespace-nowrap ">
+                            <ul class="flex space-x-6">
+                                <li class="">
+                                    <a href="#" class="text-[14px] font-[Poppins] text-black group-hover:text-red-600">
+                                        Homepages
+                                    </a>
+                                    <i
+                                        class="ri-arrow-drop-down-line ml-1 text-xl text-black group-hover:text-red-600"></i>
+                                </li>
+
+                                <li class="group flex items-center">
+                                    <a href="#" class="text-[14px] font-[Poppins] text-black group-hover:text-red-600">
+                                        Categories
+                                    </a>
+                                    <i
+                                        class="ri-arrow-drop-down-line ml-1 text-xl text-black group-hover:text-red-600"></i>
+                                </li>
+
+                                <li class="group flex items-center">
+                                    <a href="#" class="text-[14px] font-[Poppins] text-black group-hover:text-red-600">
+                                        Products
+                                    </a>
+                                    <i
+                                        class="ri-arrow-drop-down-line ml-1 text-xl text-black group-hover:text-red-600"></i>
+                                </li>
+
+                                <li class="group flex items-center">
+                                    <a href="#" class="text-[14px] font-[Poppins] text-black group-hover:text-red-600">
+                                        Pages
+                                    </a>
+                                    <i
+                                        class="ri-arrow-drop-down-line text-xl ml-1 text-black group-hover:text-red-600"></i>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[14px] font-[Poppins] text-black  hover:text-red-600">About
+                                        us</a>
+                                </li>
+
+                                <li>
+                                    <a href="#"
+                                        class="text-[14px] font-[Poppins] text-black  hover:text-red-600">Blog</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[14px] font-[Poppins] text-black  hover:text-red-600">
+                                        <i class="ri-coupon-3-line mr-1 text-xl"></i>Best Discount
+                                    </a>
+                                </li>
+                            </ul>
+                            <li class="ml-auto mr-[60px] text-[14px] font-[Poppins] text-black">
+                                Recently viewed
+                                <i class="ri-arrow-drop-down-line ml-1 text-black group-hover:text-red-600"></i>
+                            </li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2 mt-11">
+            <nav class="text-sm text-gray-500 mb-4">
+                <ol class="flex items-center gap-2">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li class="text-gray-400">/</li>
+                    <li>Blog</li>
+                </ol>
+            </nav>
+
+            <h2 class="font-extrabold text-3xl md:text-4xl leading-tight mb-6">
+                News about our company<br class="hidden sm:block" />and fashion world!
+            </h2>
+
+            <article class="bg-white rounded-md shadow-sm overflow-hidden border border-gray-100">
+                <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-1.jpg" alt="Featured"
+                    class="w-full h-[520px] object-cover object-top">
+
+                <footer class="px-6 py-4 flex flex-wrap items-center justify-between text-xs text-gray-500">
+                    <div class="flex items-center gap-4">
+                        <span class="uppercase tracking-wide">Beauty & Fashion</span>
+                        <span>•</span>
+                        <time datetime="2025-04-25">April 25, 2025</time>
+                        <span>•</span>
+                        <span>By Myoui Mina</span>
+                    </div>
+                </footer>
+            </article>
+        </div>
+
+        <aside class="space-y-8 mt-12">
+            <div class="border border-gray-900 p-4 rounded-md shadow-sm">
+                <div class="relative">
+                    <input type="search" placeholder="Search for products..."
+                        class="w-full text-sm bg-gray-50 border border-gray-200 rounded-md pl-3 pr-10 py-2 focus:outline-none focus:ring-2 focus:ring-gray-200" />
+                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <div class="border border-gray-900 p-4 rounded-md shadow-sm">
+                <h3 class="font-semibold text-sm mb-3">Categories</h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex justify-between border-b py-2"><span>Autoparts</span><span
+                            class="text-gray-400 text-xs">(3)</span></li>
+                    <li class="flex justify-between border-b py-2"><span>Beauty & Fashion</span><span
+                            class="text-gray-400 text-xs">(4)</span></li>
+                    <li class="flex justify-between border-b py-2"><span>Cosmetics</span><span
+                            class="text-gray-400 text-xs">(7)</span></li>
+                    <li class="flex justify-between border-b py-2"><span>Decor & Accents</span><span
+                            class="text-gray-400 text-xs">(3)</span></li>
+                    <li class="flex justify-between py-2"><span>Electronics</span><span
+                            class="text-gray-400 text-xs">(5)</span></li>
+                </ul>
+            </div>
+
+            <div class=" border border-gray-900 p-4 rounded-md shadow-sm">
+                <h3 class="font-semibold text-sm mb-3">Popular Posts</h3>
+                <ul class="space-y-4">
+                    <li class="flex gap-3 items-start">
+                        <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-1-150x150.jpg" class="w-16 h-16 object-cover rounded-sm" alt="">
+                        <div>
+                            <a href="#" class="block font-medium text-sm hover:underline">Weekday Outfit Inspiration for
+                                All Occasions</a>
+                            <time class="text-xs text-gray-400 block">April 25, 2025</time>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-2-150x150.jpg" class="w-16 h-16 object-cover rounded-sm" alt="">
+                        <div>
+                            <a href="#" class="block font-medium text-sm hover:underline">100% Pure & Natural Sage
+                                Essential Oil</a>
+                            <time class="text-xs text-gray-400 block">April 22, 2025</time>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-3-150x150.jpg" class="w-16 h-16 object-cover rounded-sm" alt="">
+                        <div>
+                            <a href="#" class="block font-medium text-sm hover:underline">Tips for Cleaning Desktop &
+                                Laptop</a>
+                            <time class="text-xs text-gray-400 block">April 18, 2025</time>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-4-150x150.jpg" class="w-16 h-16 object-cover rounded-sm" alt="">
+                        <div>
+                            <a href="#" class="block font-medium text-sm hover:underline">Giorgio Armani Si Intense Eau
+                                de Parfum Review</a>
+                            <time class="text-xs text-gray-400 block">April 15, 2025</time>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="border border-gray-900 p-4 rounded-md shadow-sm">
+                <h3 class="font-semibold text-sm mb-3">Recent Comments</h3>
+                <ul class="space-y-4 text-sm">
+                    <li>
+                        <div class="flex gap-3">
+                            <img src="https://secure.gravatar.com/avatar/7947020c4383dd4f1197f95638a33a6ae8dc41fbbe3105ec124eed0feed07ce7?s=150&d=mm&r=g" class="w-10 h-10 object-cover" alt="">
+                            <div>
+                                <p class="font-medium">Myoui Mina</p>
+                                <time class="text-xs text-gray-400">May 23, 2025</time>
+                                <p class="mt-1 text-gray-600">Perfect!!!! I ordered on Friday evening and on Monday at
+                                    12:30 the package was with me. I have never encountered such a fast order
+                                    processing.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex gap-3">
+                            <img src="https://secure.gravatar.com/avatar/c1cdf649f1bd86553a1d14a5b5e9a5ce0233782907d4bf8fae34dd30296ea67c?s=150&d=mm&r=g" class="w-10 h-10 object-cover" alt="">
+                            <div>
+                                <p class="font-medium">Park John</p>
+                                <time class="text-xs text-gray-400">May 20, 2025</time>
+                                <p class="mt-1 text-gray-600">OMG I LOVE IT!!! I ordered on Friday evening and on Monday
+                                    at 12:30 the package was with me. I have never encountered such a fast order
+                                    processing.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="border border-gray-900 p-4 rounded-md shadow-sm">
+                <h3 class="font-semibold text-sm mb-3">Tags</h3>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#apple</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#auto</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#automotive</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#camera</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#car</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#controller</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#cosmetic</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#decor</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#electronic</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#fashion</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#furniture</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#gaming</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#interior</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#laptop</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#lens</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#makeup</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#men</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#parfum</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#perfume</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#skincare</a>
+                    <a href="#" class="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100">#smartphone</a>
+                </div>
+            </div>
+        </aside>
+
+    </section>
+
+</body>
+
+</html>
