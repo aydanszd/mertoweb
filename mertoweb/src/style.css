@@ -1,5 +1,38 @@
 @import "tailwindcss";
+
 .swiper {
     width: 600px;
     height: 300px;
+}
+
+.img-lens {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    z-index: 30;
+}
+
+.plus-zoom {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-image-wrapper img {
+    transition: transform .25s ease;
 }
