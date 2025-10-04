@@ -1,14 +1,9 @@
-// Şəkil dəyişmə funksiyası
+
 document.querySelectorAll('.thumb').forEach(thumb => {
     thumb.addEventListener('click', function () {
-        // Yeni şəkil URL-ni al
         const newImage = this.getAttribute('data-image');
-
-        // Şəkli dəyiş
         const mainImage = document.getElementById('mainImage');
         mainImage.src = newImage;
-
-        // Aktiv thumbnail vizual göstəricisi (isteğe bağlı)
         document.querySelectorAll('.thumb').forEach(t => t.classList.remove('ring', 'ring-black'));
         this.classList.add('ring', 'ring-black');
     });
@@ -33,7 +28,6 @@ imageWrapper.addEventListener('mouseleave', () => {
     imageWrapper.style.cursor = 'zoom-in';
 });
 
-// Thumbnail dəyişmə
 const thumbs = document.querySelectorAll('.thumb');
 thumbs.forEach(thumb => {
     thumb.addEventListener('click', () => {
@@ -43,8 +37,6 @@ thumbs.forEach(thumb => {
         mainImage.src = newImage;
     });
 });
-
-// Miqdar artırma və azaltma
 const qtyInput = document.getElementById('qtyInput');
 const decreaseBtn = document.getElementById('decreaseBtn');
 const increaseBtn = document.getElementById('increaseBtn');
@@ -58,37 +50,32 @@ decreaseBtn.addEventListener('click', () => {
 increaseBtn.addEventListener('click', () => {
     qtyInput.value = parseInt(qtyInput.value) + 1;
 });
-
-// Səbətə əlavə etmə
 document.getElementById('addToCartBtn').addEventListener('click', () => {
     alert(`${qtyInput.value} ədəd məhsul səbətə əlavə edildi!`);
 });
 
 // Geri sayım taymeri
-function startCountdown() {
-    const endDate = new Date();
-    endDate.setHours(endDate.getHours() + 12);
+// function startCountdown() {
+//     const endDate = new Date();
+//     endDate.setHours(endDate.getHours() + 12);
 
-    setInterval(() => {
-        const now = new Date().getTime();
-        const distance = endDate - now;
+//     setInterval(() => {
+//         const now = new Date().getTime();
+//         const distance = endDate - now;
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('days').textContent = String(days).padStart(2, '0');
-        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-    }, 1000);
-}
+//         document.getElementById('days').textContent = String(days).padStart(2, '0');
+//         document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+//         document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+//         document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+//     }, 1000);
+// }
 
-startCountdown();
-
-
-
+// startCountdown();
 
 const sliderContainer = document.getElementById("flashbest-slider");
 const btnNext = document.getElementById("nextbest");
@@ -96,8 +83,6 @@ const btnPrev = document.getElementById("prevbest");
 const track = sliderContainer.querySelector('div.flex');
 
 const cardWidth = track.children[0].offsetWidth + parseInt(getComputedStyle(track.children[0]).marginRight);
-
-// Next button
 btnNext.addEventListener("click", () => {
     const maxScroll = sliderContainer.scrollWidth - sliderContainer.clientWidth;
     if (Math.abs(sliderContainer.scrollLeft - maxScroll) < 5) {
@@ -106,8 +91,6 @@ btnNext.addEventListener("click", () => {
     }
     sliderContainer.scrollBy({ left: cardWidth, behavior: "smooth" });
 });
-
-// Previous button
 btnPrev.addEventListener("click", () => {
     if (sliderContainer.scrollLeft <= 0) {
         track.insertBefore(track.lastElementChild, track.firstElementChild);

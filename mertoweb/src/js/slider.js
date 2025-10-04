@@ -88,12 +88,11 @@ const sliderTrack = document.getElementById("sliderTrack");
 const btnPrev = document.getElementById("btnPrev");
 const btnNext = document.getElementById("btnNext");
 
-const visibleSlides = 3; // eyni anda görünən slide sayı
+const visibleSlides = 3; 
 const slides = sliderTrack.children;
-const slideWidth = sliderTrack.clientWidth / visibleSlides; // 1 slide eni
+const slideWidth = sliderTrack.clientWidth / visibleSlides; 
 
 btnNext.addEventListener("click", () => {
-    // Əgər son slide-lara çatmışıqsa, ilk elementi sona əlavə et
     if (sliderTrack.scrollLeft + sliderTrack.clientWidth >= sliderTrack.scrollWidth) {
         sliderTrack.appendChild(slides[0]);
         sliderTrack.scrollLeft -= slideWidth;
@@ -102,7 +101,6 @@ btnNext.addEventListener("click", () => {
 });
 
 btnPrev.addEventListener("click", () => {
-    // Əgər scroll başındayıqsa, son elementi başa əlavə et
     if (sliderTrack.scrollLeft <= 0) {
         sliderTrack.insertBefore(slides[slides.length - 1], slides[0]);
         sliderTrack.scrollLeft += slideWidth;

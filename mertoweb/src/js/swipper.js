@@ -1,13 +1,13 @@
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
-    speed: 800, // animasiya sürəti
-    effect: 'slide', // səhifə kimi keçid animasiyası
+    speed: 800, 
+    effect: 'slide', 
     
     pagination: {
         el: '.swiper-pagination',
-        clickable: true,   // 🔑 nöqtələr qalacaq
-        dynamicBullets: false, // nöqtələrin sabit qalması üçün
+        clickable: true, 
+        dynamicBullets: false,
     },
 
     navigation: {

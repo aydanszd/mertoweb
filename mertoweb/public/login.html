@@ -1,0 +1,190 @@
+<!Doctype html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Merto — Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Story+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script defer type="module" src="../src/js/swipper.js"> </script>
+    <script defer type="module" src="../src/js/slider.js"></script>
+</head>
+<section x-data="{ slideWidth: 0, activeSlide: 0, slideCount: 3 }" class="relative py-20 lg:py-10 overflow-hidden">
+    <div class="container px-4 mx-auto">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap -mx-4 xl:items-center">
+                <div class="w-full lg:w-1/2 xl:w-3/5 px-4 order-last lg:order-first">
+                    <div class="relative max-w-xl mx-auto lg:mx-0 lg:max-w-3xl h-full">
+                        <img class="block w-full h-166 lg:h-full object-cover rounded-3xl"
+                            src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/05/login-banner.jpg"
+                            alt="" />
+                        <div class="absolute bottom-0 w-full left-0 p-4 sm:p-6">
+                            <div class="p-6 sm:p-10 backdrop-md 
+                        rounded-4xl">
+                                <div class="overflow-hidden">
+                                    <div class="flex transition-transform">
+                                        <div x-ref="slide1" class="flex-shrink-0 h-full w-full p-5">
+                                            <h5 class="text-3xl text-white font-semibold mb-2"></h5>
+                                            <span class="block text-sm text-white font-semibold mb-6"></span>
+                                            <p class="max-w-xl text-2xl text-white font-semibold mb-15"> </p>
+                                        </div>
+                                        <div x-ref="slide2" class="flex-shrink-0 h-full w-full p-5">
+                                            <h5 class="text-3xl text-white font-semibold mb-2">Kristin Watson</h5>
+                                            <span class="block text-sm text-white font-semibold mb-6">Medical
+                                                Assistant</span>
+                                            <p class="max-w-xl text-2xl text-white font-semibold mb-15">"Lorem ipsum
+                                                dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                incididunt ut labore et dolore magna."</p>
+                                        </div>
+                                        <div x-ref="slide3" class="flex-shrink-0 h-full w-full p-5">
+                                            <h5 class="text-3xl text-white font-semibold mb-2">Darrell Steward</h5>
+                                            <span class="block text-sm text-white font-semibold mb-6">Marketing
+                                                Coordinator</span>
+                                            <p class="max-w-xl text-2xl text-white font-semibold mb-15">"Ut enim ad
+                                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                                ex ea commodo consequat."</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button x-on:click="activeSlide = 0, slideWidth = $refs['slide1'].offsetWidth * 0"
+                                        :class="{'bg-blue-900': activeSlide === 0, 'bg-white hover:bg-blue-100': activeSlide !== 0 }"
+                                        class="inline-block mr-2 h-1 w-5 bg-blue-900 rounded-full cursor-pointer"></button>
+                                    <button x-on:click="activeSlide = 1, slideWidth = $refs['slide2'].offsetWidth * 1"
+                                        :class="{'bg-blue-900': activeSlide === 1, 'bg-white hover:bg-blue-100': activeSlide !== 1 }"
+                                        class="inline-block mr-2 h-1 w-5 bg-white hover:bg-blue-100 rounded-full cursor-pointer"></button>
+                                    <button x-on:click="activeSlide = 2, slideWidth = $refs['slide3'].offsetWidth * 2"
+                                        :class="{'bg-blue-900': activeSlide === 2, 'bg-white hover:bg-blue-100': activeSlide !== 2 }"
+                                        class="inline-block h-1 w-5 bg-white hover:bg-blue-100 rounded-full cursor-pointer"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 xl:w-2/5 px-4 mb-16 lg:mb-0">
+                    <div class="max-w-md lg:py-20 mx-auto lg:mr-0">
+                        <h3 class="font-heading text-4xl text-gray-900 font-semibold mb-4 font-[Poppins]">Sign in to
+                            your account</h3>
+                        <p class="text-lg text-gray-500 mb-10 font-[Poppins]">Greetings on your return! We kindly
+                            request you to enter
+                            your details.</p>
+                        <div class="flex flex-wrap mb-6 items-center -mx-2">
+                            <div class="w-full md:w-1/2 px-2 mb-3 md:mb-0">
+                                <a class="inline-flex w-full py-3 px-4 items-center justify-center rounded-full border border-gray-200 hover:border-gray-400 transition duration-100"
+                                    href="#">
+                                    <img src="saturn-assets/images/sign-up/icon-facebook.svg" alt="" />
+                                    <span class="ml-4 text-sm font-semibold text-gray-500">Login with Facebook</span>
+                                </a>
+                            </div>
+                            <div class="w-full md:w-1/2 px-2">
+                                <a class="inline-flex w-full py-3 px-4 items-center justify-center rounded-full border border-gray-200 hover:border-gray-400 transition duration-100"
+                                    href="#">
+                                    <img src="saturn-assets/images/sign-up/icon-apple.svg" alt="" />
+                                    <span class="ml-4 text-sm font-semibold text-gray-500">Login with Apple</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex mb-6 items-center">
+                            <div class="w-full h-px bg-gray-300"></div>
+                            <span class="mx-4 text-sm font-semibold text-gray-500">Or</span>
+                            <div class="w-full h-px bg-gray-300"></div>
+                        </div>
+                        <form action="">
+                            <div class="mb-6">
+                                <label class="block mb-1.5 text-sm text-gray-900 font-semibold" for="">Email</label>
+                                <input
+                                    class="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg"
+                                    type="email" placeholder="pat@saturn.dev" />
+                            </div>
+                            <div class="mb-7">
+                                <div class="flex mb-1.5 items-center justify-between">
+                                    <label class="block text-sm text-gray-900 font-semibold" for="">Password</label>
+                                    <a class="inline-block text-xs font-semibold text-yellow-400 hover:text-gray-900"
+                                        href="#">Forget password?</a>
+                                </div>
+                                <div class="relative">
+                                    <input
+                                        class="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg"
+                                        type="password" placeholder="Enter your password" />
+                                    <button
+                                        class="absolute top-1/2 right-0 mr-3 transform -translate-y-1/2 inline-block hover:scale-110 transition duration-100">
+                                        <img src="saturn-assets/images/sign-up/icon-eye.svg" alt="" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex mb-6 items-center">
+                                <input type="checkbox" value="" id="" />
+                                <label class="ml-2 text-xs text-gray-800" for="">Remember for 30 days</label>
+                            </div>
+                            <button
+                                class="relative group block w-full mb-6 py-3 px-5 text-center text-sm font-semibold text-orange-50 bg-yellow-400 rounded-full overflow-hidden"
+                                type="submit">
+                                <div
+                                    class="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500">
+                                </div>
+                                <span class="relative">Login</span>
+                            </button>
+                            <span class="text-xs font-semibold text-gray-900">
+                                <span>Don’t have an account?</span>
+                                <a class="ml-1 inline-block text-yellow-400 hover:text-orange-700" href="#">Sign up</a>
+                            </span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCOeDrICcabm06H877gVMteQU-41RqK_bA",
+            authDomain: "auth-pf502aa.firebaseapp.com",
+            projectId: "auth-pf502aa",
+            storageBucket: "auth-pf502aa.firebasestorage.app",
+            messagingSenderId: "375753919888",
+            appId: "1:375753919888:web:967435d8649beb5850f715",
+            measurementId: "G-58FZKG5EWF"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        const loginForm = document.querySelector("form");
+
+        loginForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const email = loginForm.querySelector('input[type="email"]').value;
+            const password = loginForm.querySelector('input[type="password"]').value;
+
+            try {
+                const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                window.location.href = "index.html"; 
+            } catch (loginError) {
+                if (loginError.code === "auth/user-not-found") {
+                    try {
+                        const newUser = await createUserWithEmailAndPassword(auth, email, password);
+                        window.location.href = "index.html"; 
+                    } catch (signupError) {
+                        alert("Signup failed: " + signupError.message);
+                    }
+                } else {
+                    alert("Login failed: " + loginError.message);
+                }
+            }
+        });
+    </script>
+
+</section>
+
+</html>

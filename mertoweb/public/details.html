@@ -17,6 +17,10 @@
     <script defer type="module" src="../src/js/swipper.js"> </script>
     <script defer type="module" src="../src/js/slider.js"></script>
     <link rel="stylesheet" href="../src/style.css">
+    <script defer src="../src/js/filterbar.js"></script>
+    <script defer src="../src/js/shopdet.js"></script>
+    <script defer type="module" src="../src/js/shop.js"></script>
+    <script defer src="../src/js/details.js"></script>
 </head>
 
 <body class="bg-gray-50">
@@ -232,31 +236,28 @@
                         <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/05/electronic-30-3-300x300.jpg"
                             class="w-full h-full object-cover" />
                     </div>
-
                     <div class="border border-gray-800 rounded-lg overflow-hidden cursor-pointer thumb w-20 h-20"
                         data-image="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/05/electronic-30-4.jpg">
                         <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/05/electronic-30-4.jpg"
                             class="w-full h-full object-cover" />
                     </div>
                 </div>
-
                 <div class="bg-white border border-gray-300 p-5 rounded-[6px] relative flex-1">
                     <div
                         class="absolute top-5 right-5 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow text-xl z-10">
                         <i class="ri-add-line"></i>
                     </div>
-                    <div class="relative w-full h-[520px] overflow-hidden cursor-zoom-in" id="imageWrapper">
+                    <div  class="relative w-full h-[520px] overflow-hidden cursor-zoom-in" id="imageWrapper">
                         <img id="mainImage"
                             src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/05/electronic-30-6.jpg"
                             class="w-full h-full object-contain transition-transform duration-100" />
                     </div>
                 </div>
             </div>
-
             <div class="max-w-[480px] ">
                 <div class="text-sm text-gray-500 mb-2 font-[Poppins]">Asus</div>
 
-                <h1 class="text-[26px] font-[Poppins] font-semibold mb-4">
+                <h1 id=productName class="text-[26px] font-[Poppins] font-semibold mb-4 ">
                     Laptop Asus Vivobook I5 1355U, 8GB RAM, 512GB SSD
                 </h1>
 
@@ -289,7 +290,7 @@
 
                 <div class="flex items-center justify-between mb-6">
                     <div class="flex items-baseline gap-3">
-                        <span class="text-[26px] font-semibold text-black">$999</span>
+                        <span id="productPrice" class="text-[26px] font-semibold text-black ">$999</span>
                         <span class="text-gray-400 font-medium text-[20px] line-through">$1,536</span>
                         <span class="text-red-600 text-[15px] font-semibold">(Save $537)</span>
                     </div>
