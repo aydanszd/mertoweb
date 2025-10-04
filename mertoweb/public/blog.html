@@ -1,0 +1,745 @@
+<!Doctype html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Merto — Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Story+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script defer type="module" src="../src/js/swipper.js"> </script>
+    <script defer type="module" src="../src/js/slider.js"></script>
+</head>
+
+<body class="bg-gray-50">
+    <header class=" border-b h-[100px] ">
+        <div class="container mx-auto px-0 mt-5">
+            <div class="grid grid-cols-12 items-center gap-4 py-4">
+
+                <div class="col-span-12 sm:col-span-4 lg:col-span-3 xl:col-span-2 flex items-center ml-[-100px]">
+                    <a href="#" class="inline-block">
+                        <img src="https://merto-be87.kxcdn.com/merto/wp-content/themes/merto/images/logo.png"
+                            alt="Merto" class="h-11 w-auto">
+                    </a>
+                </div>
+                <div class="col-span-12 sm:col-span-8 lg:col-span-8 xl:col-span-6 ">
+                    <div class="flex items-center justify-center space-x-6">
+                        <div
+                            class="hidden md:flex items-center space-x-1 text-black transform -translate-x-[20px] cursor-pointer hover:text-red-600">
+                            <div class="p-2 rounded-full">
+                                <i class="ri-phone-line text-4xl"></i>
+                            </div>
+                            <div class="text-[15px] w-[130px]  hover:text-red-600 ">
+                                <div class="text-xs text-black font-[Poppins]  hover:text-red-600 cursor-pointer">
+                                    Contact us 24/7</div>
+                                <div class="font-[Poppins] font-semibold">(+92) 3942 7879</div>
+                            </div>
+                        </div>
+
+                        <div class="flex-1 max-w-6xl w-full bg-[#EBEEF0] rounded-[8px] transform -translate-x-[20px]">
+                            <div class="flex rounded-md overflow-hidden">
+
+                                <button
+                                    class="flex items-center gap-2 py-2 text-sm text-gray-700 hover:bg-gray-200 border-r ml-5">
+                                    <span
+                                        class="whitespace-nowrap text-black font-[Poppins] font-medium text-[14px]">All
+                                        Categories</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+
+                                <div class="relative flex-1">
+                                    <input type="search" placeholder="Search for products"
+                                        class="bg-[#EBEEF0] py-[18px] pl-4 pr-12 text-[16px] focus:outline-none w-[600px] ml-6" />
+                                    <button
+                                        class="absolute right-1 mr-2 top-1/2 -translate-y-1/2 h-[44px] w-[48px] flex items-center justify-center rounded-md bg-gray-900 text-white">
+                                        <i class="ri-search-line text-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="col-span-12 sm:col-span-12 lg:col-span-3 xl:col-span-4 flex items-center justify-end space-x-4 transform translate-x-[100px]">
+                    <div class="relative" id="langWrap">
+                        <button id="langBtn"
+                            class="flex transform translate-x-5 items-center space-x-1 px-3 py-2 rounded-md hover:bg-gray-50">
+                            <img id="langBtnImg"
+                                src="https://merto-be87.kxcdn.com/merto/wp-content/plugins/themesky-demo/images/flags/english.png"
+                                alt="lang" class="w-4 h-3 rounded-sm object-cover">
+                            <span id="langBtnText" class="text-[15px] text-black">English</span>
+                            <i class="ri-arrow-down-s-line ml-1"></i>
+                        </button>
+                        <ul id="langDropdown"
+                            class="absolute right-0 mt-2 w-44 bg-white rounded-md shadow-lg py-1 hidden z-20">
+                            <li><button class="w-full text-left px-3 py-2 hover:bg-gray-50 flex items-center space-x-2"
+                                    data-lang="en"
+                                    data-src="https://merto-be87.kxcdn.com/merto/wp-content/plugins/themesky-demo/images/flags/espanol.png"><img
+                                        src="https://merto-be87.kxcdn.com/merto/wp-content/plugins/themesky-demo/images/flags/espanol.png"
+                                        class="w-5 h-5 rounded-sm" alt="US"><span
+                                        class="text-sm">English</span></button></li>
+                            <li><button class="w-full text-left px-3 py-2 hover:bg-gray-50 flex items-center space-x-2"
+                                    data-lang="az" data-src="/images/flags/az.svg"><img
+                                        src="https://merto-be87.kxcdn.com/merto/wp-content/plugins/themesky-demo/images/flags/francais.png"
+                                        class="w-5 h-5 rounded-sm" alt="AZ"><span
+                                        class="text-sm">Azərbaycan</span></button></li>
+                            <li><button class="w-full text-left px-3 py-2 hover:bg-gray-50 flex items-center space-x-2"
+                                    data-lang="tr" data-src="/images/flags/tr.svg"><img
+                                        src="https://merto-be87.kxcdn.com/merto/wp-content/plugins/themesky-demo/images/flags/portugues.png"
+                                        class="w-5 h-5 rounded-sm" alt="TR"><span class="text-sm">Türkçe</span></button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="relative" id="currWrap">
+                        <button id="currBtn" class="flex items-center space-x-2 px-2 py-2 rounded-md hover:bg-gray-50">
+                            <span id="currBtnText" class="text-[15px]  text-black">USD</span>
+                            <i class="ri-arrow-down-s-line ml-1"></i>
+                        </button>
+                        <ul id="currDropdown"
+                            class="absolute right-0 mt-2 w-32 bg-white border rounded-md shadow-lg py-1 hidden z-20">
+                            <li><button class="w-full text-left px-3 py-2 hover:bg-gray-50" data-curr="USD">USD</button>
+                            </li>
+                            <li><button class="w-full text-left px-3 py-2 hover:bg-gray-50" data-curr="AZN">AZN</button>
+                            </li>
+                            <li><button class="w-full text-left px-3 py-2 hover:bg-gray-50" data-curr="EUR">EUR</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#" class="hidden sm:flex items-center space-x-2 text-[16px] text-black hover:text-red-600">
+                        <i class="ri-user-line text-2xl"></i>
+                        <span class="font-semibold">Account</span>
+                    </a>
+
+                    <div class="flex items-center space-x-2">
+                        <button class="p-2 rounded-full" aria-label="Wishlist">
+                            <i class="ri-heart-line   hover:text-red-600 text-2xl text-black"></i>
+                        </button>
+                        <button class="relative p-2 rounded-full  hover:text-red-600" aria-label="Cart">
+                            <i class="ri-shopping-cart-line text-2xl text-black  hover:text-red-600"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" border-b h-[70px]">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center gap-6 py-3">
+
+                    <button
+                        class="flex items-center gap-2 transform -translate-x-[120px] mt-5 rounded bg-white hover:shadow-sm">
+                        <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <span class="text-sm font-medium text-black">SHOP BY CATEGORIES</span>
+                    </button>
+
+                    <nav class="flex-1 overflow-x-auto mt-3 transform -translate-x-[70px]">
+                        <ul class="flex items-center gap-[50px] whitespace-nowrap ">
+                            <ul class="flex space-x-6">
+                                <li class="">
+                                    <a href="#" class="text-[14px] font-[Poppins] text-black group-hover:text-red-600">
+                                        Homepages
+                                    </a>
+                                    <i
+                                        class="ri-arrow-drop-down-line ml-1 text-xl text-black group-hover:text-red-600"></i>
+                                </li>
+
+                                <li class="group flex items-center">
+                                    <a href="#" class="text-[14px] font-[Poppins] text-black group-hover:text-red-600">
+                                        Categories
+                                    </a>
+                                    <i
+                                        class="ri-arrow-drop-down-line ml-1 text-xl text-black group-hover:text-red-600"></i>
+                                </li>
+
+                                <li class="group flex items-center">
+                                    <a href="#" class="text-[14px] font-[Poppins] text-black group-hover:text-red-600">
+                                        Products
+                                    </a>
+                                    <i
+                                        class="ri-arrow-drop-down-line ml-1 text-xl text-black group-hover:text-red-600"></i>
+                                </li>
+
+                                <li class="group flex items-center">
+                                    <a href="#" class="text-[14px] font-[Poppins] text-black group-hover:text-red-600">
+                                        Pages
+                                    </a>
+                                    <i
+                                        class="ri-arrow-drop-down-line text-xl ml-1 text-black group-hover:text-red-600"></i>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[14px] font-[Poppins] text-black  hover:text-red-600">About
+                                        us</a>
+                                </li>
+
+                                <li>
+                                    <a href="#"
+                                        class="text-[14px] font-[Poppins] text-black  hover:text-red-600">Blog</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[14px] font-[Poppins] text-black  hover:text-red-600">
+                                        <i class="ri-coupon-3-line mr-1 text-xl"></i>Best Discount
+                                    </a>
+                                </li>
+                            </ul>
+                            <li class="ml-auto mr-[60px] text-[14px] font-[Poppins] text-black">
+                                Recently viewed
+                                <i class="ri-arrow-drop-down-line ml-1 text-black group-hover:text-red-600"></i>
+                            </li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2 mt-11">
+            <nav class="text-sm mb-4">
+                <ol class="flex items-center gap-2">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li class=""><i class="ri-arrow-right-wide-fill"></i></li>
+                    <li class="text-black">Blog</li>
+                </ol>
+            </nav>
+            <h2 class="font-semibold font-[Poppins] text-3xl md:text-4xl leading-tight mb-6">
+                News about our company<br class="hidden sm:block" />and fashion world!
+            </h2>
+            <article class=" rounded-md shadow-sm overflow-hidden ">
+                <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-1.jpg" alt="Featured"
+                    class="w-full h-[700px] object-cover object-top">
+                <footer class="px-6 py-4 flex flex-wrap items-center justify-between text-xs text-gray-500">
+                    <div class="flex items-center gap-4">
+                        <span class="uppercase text-black ml-[-20px] mt-2">Beauty & Fashion</span>
+                        <time class="text-black" datetime="2025-04-25">April 25,2025</time>
+                        <span class="text-black">By Myoui Mina</span>
+                    </div>
+                </footer>
+                <div>
+                    <h1 class="font-[Poppins] text-[26px] font-semibold">Weekday Outfit Inspiration for All Occasion
+                        <p class=" mt-3 text-gray-500 leading-relaxed text-[14px] font-normal font-[Poppins]">Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Alias asperiores eaque rerum? Dicta,
+                            necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat
+                            culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat </p>
+                    </h1>
+                    <a href="#"
+                        class="inline-block text-center mt-[24px] bg-white text-black font-semibold px-7 py-3 rounded-md shadow  border border-black hover:bg-black hover:text-white transition">
+                        Read More
+                    </a>
+                </div>
+                <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-2.jpg" alt="Featured"
+                    class="w-full h-[700px] object-cover object-top mt-[60px]">
+                <footer class="px-6 py-4 flex flex-wrap items-center justify-between text-xs text-gray-500">
+                    <div class="flex items-center gap-4">
+                        <span class="uppercase text-black ml-[-20px] mt-2">Beauty & Fashion</span>
+                        <time class="text-black" datetime="2025-04-25">April 25,2025</time>
+                        <span class="text-black">By Myoui Mina</span>
+                    </div>
+                </footer>
+                <div>
+                    <h1 class="font-[Poppins] text-[26px] font-semibold">Weekday Outfit Inspiration for All Occasion
+                        <p class=" mt-3 text-gray-500 leading-relaxed text-[14px] font-normal font-[Poppins]">Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Alias asperiores eaque rerum? Dicta,
+                            necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat
+                            culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat </p>
+                    </h1>
+                    <a href="#"
+                        class="inline-block text-center mt-[24px] bg-white text-black font-semibold px-7 py-3 rounded-md shadow  border border-black hover:bg-black hover:text-white transition">
+                        Read More
+                    </a>
+                </div>
+                <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-3.jpg" alt="Featured"
+                    class="w-full h-[700px] object-cover object-top mt-[60px]">
+                <footer class="px-6 py-4 flex flex-wrap items-center justify-between text-xs text-gray-500">
+                    <div class="flex items-center gap-4">
+                        <span class="uppercase text-black ml-[-20px] mt-2">Beauty & Fashion</span>
+                        <time class="text-black" datetime="2025-04-25">April 25,2025</time>
+                        <span class="text-black">By Myoui Mina</span>
+                    </div>
+                </footer>
+                <div>
+                    <h1 class="font-[Poppins] text-[26px] font-semibold">Weekday Outfit Inspiration for All Occasion
+                        <p class=" mt-3 text-gray-500 leading-relaxed text-[14px] font-normal font-[Poppins]">Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Alias asperiores eaque rerum? Dicta,
+                            necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat
+                            culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat </p>
+                    </h1>
+                    <a href="#"
+                        class="inline-block text-center mt-[24px] bg-white text-black font-semibold px-7 py-3 rounded-md shadow  border border-black hover:bg-black hover:text-white transition">
+                        Read More
+                    </a>
+                </div>
+                <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-4.jpg" alt="Featured"
+                    class="w-full h-[700px] object-cover object-top mt-[60px]">
+                <footer class="px-6 py-4 flex flex-wrap items-center justify-between text-xs text-gray-500">
+                    <div class="flex items-center gap-4">
+                        <span class="uppercase text-black ml-[-20px] mt-2 ">Beauty & Fashion</span>
+                        <time class="text-black" datetime="2025-04-25">April 25,2025</time>
+                        <span class="text-black">By Myoui Mina</span>
+                    </div>
+                </footer>
+                <div>
+                    <h1 class="font-[Poppins] text-[26px] font-semibold">Weekday Outfit Inspiration for All Occasion
+                        <p class=" mt-3 text-gray-500 leading-relaxed text-[14px] font-normal font-[Poppins]">Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Alias asperiores eaque rerum? Dicta,
+                            necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat
+                            culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat </p>
+                    </h1>
+                    <a href="#"
+                        class="inline-block text-center mt-[24px] bg-white text-black font-semibold px-7 py-3 rounded-md shadow  border border-black hover:bg-black hover:text-white transition">
+                        Read More
+                    </a>
+                </div>
+                <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-5-1.jpg" alt="Featured"
+                    class="w-full h-[700px] object-cover object-top mt-[60px]">
+                <footer class="px-6 py-4 flex flex-wrap items-center justify-between text-xs text-gray-500">
+                    <div class="flex items-center gap-4">
+                        <span class="uppercase text-black ml-[-20px] mt-2 ">Beauty & Fashion</span>
+                        <time class="text-black" datetime="2025-04-25">April 25,2025</time>
+                        <span class="text-black">By Myoui Mina</span>
+                    </div>
+                </footer>
+                <div>
+                    <h1 class="font-[Poppins] text-[26px] font-semibold">Weekday Outfit Inspiration for All Occasion
+                        <p class=" mt-3 text-gray-500 leading-relaxed text-[14px] font-normal font-[Poppins]">Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Alias asperiores eaque rerum? Dicta,
+                            necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat
+                            culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat </p>
+                    </h1>
+                    <a href="#"
+                        class="inline-block text-center mt-[24px] bg-white text-black font-semibold px-7 py-3 rounded-md shadow  border border-black hover:bg-black hover:text-white transition">
+                        Read More
+                    </a>
+                </div>
+                <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-6.jpg" alt="Featured"
+                    class="w-full h-[700px] object-cover object-top mt-[60px]">
+                <footer class="px-6 py-4 flex flex-wrap items-center justify-between text-xs text-gray-500">
+                    <div class="flex items-center gap-4">
+                        <span class="uppercase text-black ml-[-20px] mt-2 ">Beauty & Fashion</span>
+                        <time class="text-black" datetime="2025-04-25">April 25,2025</time>
+                        <span class="text-black">By Myoui Mina</span>
+                    </div>
+                </footer>
+                <div>
+                    <h1 class="font-[Poppins] text-[26px] font-semibold">Weekday Outfit Inspiration for All Occasion
+                        <p class=" mt-3 text-gray-500 leading-relaxed text-[14px] font-normal font-[Poppins]">Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Alias asperiores eaque rerum? Dicta,
+                            necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat
+                            culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat </p>
+                    </h1>
+                    <a href="#"
+                        class="inline-block text-center mt-[24px]  bg-white text-black font-semibold px-7 py-3 rounded-md shadow  border border-black hover:bg-black hover:text-white transition">
+                        Read More
+                    </a>
+                </div>
+                <div class="border border-black h-[234px] mt-[50px] relative rounded-[6px]">
+                    <i class="ri-double-quotes-l text-6xl ml-[40px] relative top-[30px]"></i>
+                    <h1 class="font-[Poppins] text-[19px] font-semibold w-[700px] ml-[50px] mt-[30px]">Nunc eleifend sollicitudinibh eu posuere. Aliquam elementum mi, nec tincidunt ex sagittis a. Integer nec elit quis purus hendrerit maximus nec eget felis.</h1>
+                    <p class="ml-[50px] mt-2 font-light"> Queto - By Matthew</p>
+                </div>
+            </article>
+            <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-7.png" alt="Featured"
+                    class="w-full h-[700px] object-cover object-top mt-[60px]">
+                <footer class="px-6 py-4 flex flex-wrap items-center justify-between text-xs text-gray-500">
+                    <div class="flex items-center gap-4">
+                        <span class="uppercase text-black ml-[-20px] mt-2 ">Beauty & Fashion</span>
+                        <time class="text-black" datetime="2025-04-25">April 25,2025</time>
+                        <span class="text-black">By Myoui Mina</span>
+                    </div>
+                </footer>
+                <div>
+                    <h1 class="font-[Poppins] text-[26px] font-semibold">Weekday Outfit Inspiration for All Occasion
+                        <p class=" mt-3 text-gray-500 leading-relaxed text-[14px] font-normal font-[Poppins]">Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Alias asperiores eaque rerum? Dicta,
+                            necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat
+                            culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat </p>
+                    </h1>
+                    <a href="#"
+                        class="inline-block text-center mt-[24px] bg-white text-black font-semibold px-7 py-3 rounded-md shadow  border border-black hover:bg-black hover:text-white transition">
+                        Read More
+                    </a>
+                </div>
+                <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-8.jpg" alt="Featured"
+                    class="w-full h-[700px] object-cover object-top mt-[60px]">
+                <footer class="px-6 py-4 flex flex-wrap items-center justify-between text-xs text-gray-500">
+                    <div class="flex items-center gap-4">
+                        <span class="uppercase text-black ml-[-20px] mt-2 ">Beauty & Fashion</span>
+                        <time class="text-black" datetime="2025-04-25">April 25,2025</time>
+                        <span class="text-black">By Myoui Mina</span>
+                    </div>
+                </footer>
+                <div>
+                    <h1 class="font-[Poppins] text-[26px] font-semibold">Weekday Outfit Inspiration for All Occasion
+                        <p class=" mt-3 text-gray-500 leading-relaxed text-[14px] font-normal font-[Poppins]">Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Alias asperiores eaque rerum? Dicta,
+                            necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat
+                            culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat </p>
+                    </h1>
+                    <a href="#"
+                        class="inline-block text-center mt-[24px] bg-white text-black font-semibold px-7 py-3 rounded-md shadow  border border-black hover:bg-black hover:text-white transition">
+                        Read More
+                    </a>
+                </div>
+                <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-9.jpg" alt="Featured"
+                    class="w-full h-[700px] object-cover object-top mt-[60px]">
+                <footer class="px-6 py-4 flex flex-wrap items-center justify-between text-xs text-gray-500">
+                    <div class="flex items-center gap-4">
+                        <span class="uppercase text-black ml-[-20px] mt-2">Beauty & Fashion</span>
+                        <time class="text-black" datetime="2025-04-25">April 25,2025</time>
+                        <span class="text-black">By Myoui Mina</span>
+                    </div>
+                </footer>
+                <div>
+                    <h1 class="font-[Poppins] text-[26px] font-semibold">Weekday Outfit Inspiration for All Occasion
+                        <p class=" mt-3 text-gray-500 leading-relaxed text-[14px] font-normal font-[Poppins]">Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Alias asperiores eaque rerum? Dicta,
+                            necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat necessitatibus repellendus unde rem a molestias voluptatum fugiat quaerat
+                            culpa, eos, magni
+                            illum laudantium ipsum accusantium nobis.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias asperiores eaque rerum? Dicta, necessitatibus repellendus unde rem a molestias
+                            voluptatum fugiat </p>
+                    </h1>
+                    <a href="#"
+                        class="inline-block text-center mt-[24px] bg-white text-black font-semibold px-7 py-3 rounded-md shadow  border border-black hover:bg-black hover:text-white transition">
+                        Read More
+                    </a>
+                </div>
+        </div>
+        <aside class="space-y-8 mt-[70px]">
+            <div class=" border-gray-900 p-5 rounded-md shadow-sm">
+                <div class="relative">
+                    <input type="search" placeholder="Search for products..."
+                        class="w-full text-sm bg-gray-50 border border-gray-900 rounded-md pl-3 pr-10 py-3 focus:outline-none focus:ring-2 focus:ring-gray-200" />
+                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-900">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <div class="p-6 rounded-md shadow-sm transform translate-y-[-50px]">
+                <h3 class="font-semibold text-[16px] mb-4 text-[Poppins]">Categories</h3>
+                <ul class="space-y-2 text-[14px] font-[Poppins] text-gray-400">
+                    <li class="flex justify-between border-b py-2 text-black"><span>Autoparts</span><span
+                            class="text-gray-900 text-xs">(3)</span></li>
+                    <li class="flex justify-between border-b py-2 text-black"><span>Autoparts</span><span
+                            class="text-gray-900 text-xs">(3)</span></li>
+                    <li class="flex justify-between border-b py-2 text-black"><span>Beauty & Fashion</span><span
+                            class="text-gray-900 text-xs">(4)</span></li>
+                    <li class="flex justify-between border-b py-2 text-black"><span>Cosmetics</span><span
+                            class="text-gray-900 text-xs">(7)</span></li>
+                    <li class="flex justify-between border-b py-2 text-black"><span>Decor & Accents</span><span
+                            class="text-gray-900 text-xs">(3)</span></li>
+                    <li class="flex justify-between py-2 text-black last:border-b-0"><span>Electronics</span><span
+                            class="text-gray-900 text-xs">(5)</span></li>
+
+                </ul>
+            </div>
+            <div class=" p-4 rounded-md shadow-sm">
+                <h3 class="font-semibold text-[16px] mb-6 text-[Poppins] mt-[-100px]">Popular Posts</h3>
+                <ul class="space-y-4">
+                    <li class="flex gap-3 items-start border-b border-gray-300 pb-3">
+                        <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-1-150x150.jpg"
+                            class="w-[80px] h-14 object-cover rounded-[8px]" alt="">
+                        <div>
+                            <a href="#" class="block font-medium text-sm hover:underline">Weekday Outfit Inspiration for
+                                All Occasions</a>
+                            <time class="text-xs text-gray-400 block">April 25, 2025</time>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start border-b border-gray-300 pb-3">
+                        <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-2-150x150.jpg"
+                            class="w-[80px] h-14 object-cover rounded-[8px]" alt="">
+                        <div>
+                            <a href="#" class="block font-medium text-sm hover:underline">100% Pure & Natural Sage
+                                Essential Oil</a>
+                            <time class="text-xs text-gray-400 block">April 22, 2025</time>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start border-b border-gray-300 pb-3">
+                        <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-3-150x150.jpg"
+                            class="w-[80px] h-14 object-cover rounded-[8px]" alt="">
+                        <div>
+                            <a href="#" class="block font-medium text-sm hover:underline">Tips for Cleaning Desktop &
+                                Laptop</a>
+                            <time class="text-xs text-gray-400 block">April 18, 2025</time>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start pb-3">
+                        <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/03/blog-4-150x150.jpg"
+                            class="w-[80px] h-14 object-cover rounded-[8px]" alt="">
+                        <div>
+                            <a href="#" class="block font-medium text-sm hover:underline">Giorgio Armani Si Intense Eau
+                                de Parfum Review</a>
+                            <time class="text-xs text-gray-400 block">April 15, 2025</time>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class=" transform translate-y-[-20px] p-4 rounded-md shadow-sm">
+                <h3 class="font-semibold text-[16px] mb-6 text-[Poppins] mt-[-20px]">Recent Comments</h3>
+                <ul class="space-y-4 text-sm">
+                    <li>
+                        <div class="flex gap-3">
+                            <img src="https://secure.gravatar.com/avatar/7947020c4383dd4f1197f95638a33a6ae8dc41fbbe3105ec124eed0feed07ce7?s=150&d=mm&r=g"
+                                class="w-[60px] h-[60px] object-cover rounded-[8px]" alt="">
+                            <div class="flex-1">
+                                <p class="font-medium text-black">Myoui Mina</p>
+                                <time class="text-xs text-gray-500">May 23, 2025</time>
+                                <p class="mt-8 text-black ml-[-66px] font-[Poppins]">Perfect!!!! I ordered on Friday
+                                    evening and on
+                                    Monday at 12:30 the package was with me. I have never encountered such a fast order
+                                    processing.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex gap-3">
+                            <img src="https://secure.gravatar.com/avatar/c1cdf649f1bd86553a1d14a5b5e9a5ce0233782907d4bf8fae34dd30296ea67c?s=150&d=mm&r=g"
+                                class="w-[60px] h-[60px] object-cover rounded-[8px]" alt="">
+                            <div class="flex-1">
+                                <p class="font-medium text-black">Park John</p>
+                                <time class="text-xs text-gray-500">May 20, 2025</time>
+                                <p class="mt-8 text-black ml-[-66px] font-[Poppins]">OMG I LOVE IT!!! I ordered on
+                                    Friday evening
+                                    and on Monday at 12:30 the package was with me. I have never encountered such a fast
+                                    order processing.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="p-4 rounded-md shadow-sm transform translate-y-[-50px]">
+                <h3 class="font-semibold text-[16px] mb-6 text-[Poppins] mt-[-20px]">Tags</h3>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#apple</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#auto</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#automotive</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#camera</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#car</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#controller</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#cosmetic</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px]  font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#decor</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#electronic</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#fashion</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#furniture</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#gaming</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#interior</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#laptop</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#lens</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#makeup</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#men</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#parfum</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#perfume</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#skincare</a>
+                    <a href="#"
+                        class="px-3 py-2 text-[14px] font-[Poppins] border rounded-md text-gray-900 hover:bg-gray-100">#smartphone</a>
+                </div>
+            </div>
+        </aside>
+    </section>
+        <footer class="bg-[#1C1C1F] text-gray-200 mt-[100px]">
+        <div class="max-w-[1200px] mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/04/logo.png" alt="Merto"
+                        class="h-10 object-contain">
+
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="ri-map-pin-line text-xl mt-1"></i>
+                            <div>
+                                <p class="text-gray-300">29 SE 2nd Ave, Miami</p>
+                                <p class="text-gray-400 text-xs">Florida 33131, United States</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-mail-line text-xl"></i>
+                            <a href="mailto:info@example.com" class="text-gray-300 text-sm">info@example.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-phone-line text-xl"></i>
+                            <a href="tel:+9239427879" class="text-gray-300 font-medium">(+92) 3942 7879</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2 grid grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-3">SHOPPING</h4>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><a href="#" class="hover:text-red-500">Wishlist</a></li>
+                            <li><a href="#" class="hover:text-red-500">Shop by Brand</a></li>
+                            <li><a href="#" class="hover:text-red-500">Offers</a></li>
+                            <li><a href="#" class="hover:text-red-500">Track order</a></li>
+                            <li><a href="#" class="hover:text-red-500">Size Guide</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-semibold mb-3">INFORMATION</h4>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><a href="#" class="hover:text-red-500">Track Order</a></li>
+                            <li><a href="#" class="hover:text-red-500">Shipping & Returns</a></li>
+                            <li><a href="#" class="hover:text-red-500">About us</a></li>
+                            <li><a href="#" class="hover:text-red-500">Help</a></li>
+                            <li><a href="#" class="hover:text-red-500">Gift Cards</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-semibold mb-3">ACCOUNT</h4>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><a href="#" class="hover:text-red-500">Cart</a></li>
+                            <li><a href="#" class="hover:text-red-500">My account</a></li>
+                            <li><a href="#" class="hover:text-red-500">My orders</a></li>
+                            <li><a href="#" class="hover:text-red-500">Wishlist</a></li>
+                            <li><a href="#" class="hover:text-red-500">Affiliate Program</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-white font-semibold">Let's keep in touch</h4>
+
+                    <form class="flex items-center gap-2">
+                        <input type="email" placeholder="enter your email address"
+                            class="flex-1 bg-transparent border border-gray-700 rounded-md px-3 py-2 text-sm placeholder-gray-400 focus:outline-none focus:border-gray-500" />
+                        <button type="submit" class="bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded-md">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </form>
+
+                    <div class="flex items-center gap-3 mt-2">
+                        <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i
+                                class="ri-facebook-fill"></i></a>
+                        <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i class="ri-tiktok-line"></i></a>
+                        <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i class="ri-twitter-line"></i></a>
+                        <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i class="ri-youtube-line"></i></a>
+                        <a href="#" class="text-gray-300 text-xl hover:text-red-500"><i
+                                class="ri-instagram-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="border border-gray-700 rounded-md p-4 flex items-center gap-4">
+                    <i class="ri-phone-line text-2xl"></i>
+                    <div>
+                        <p class="font-medium">Didn't find what you were looking for?</p>
+                        <a href="#" class="text-sm text-gray-300 hover:underline">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="border border-gray-700 rounded-md p-4 flex items-center gap-4">
+                    <i class="ri-question-line text-2xl"></i>
+                    <div>
+                        <p class="font-medium">How can we help you today?</p>
+                        <a href="#" class="text-sm text-gray-300 hover:underline">Help Center</a>
+                    </div>
+                </div>
+
+                <div class="border border-gray-700 rounded-md p-4 flex items-center gap-4">
+                    <i class="ri-chat-3-line text-2xl"></i>
+                    <div>
+                        <p class="font-medium">We'd love to hear what you think!</p>
+                        <a href="#" class="text-sm text-gray-300 hover:underline">Give Feedback</a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-gray-800 pt-6">
+                <p class="text-sm text-gray-400">Copyright © Merto. All Rights Reserved</p>
+
+                <div class="flex items-center gap-3">
+                    <img src="https://merto-be87.kxcdn.com/merto/wp-content/uploads/2024/04/payment-icons-1.png"
+                        alt="PayPal" class="h-8">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

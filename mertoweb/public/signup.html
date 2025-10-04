@@ -1,0 +1,277 @@
+<!Doctype html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Merto — Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Story+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script defer type="module" src="../src/js/swipper.js"> </script>
+    <script defer type="module" src="../src/js/slider.js"></script>
+</head>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signup - Hand-drawn Paper UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Patrick Hand', cursive;
+            background: #fefefe url('https://www.transparenttextures.com/patterns/pw-maze-white.png') repeat;
+        }
+
+        .dark body {
+            background: #18181b url('https://www.transparenttextures.com/patterns/pw-maze-white.png') repeat;
+        }
+
+        .hand-drawn-border {
+            border: 2.5px dashed #6b7280;
+            border-radius: 12px;
+            box-shadow: 4px 4px 0 #d1d5db, inset 0 0 6px #f3f4f6;
+            background: #fff;
+            position: relative;
+        }
+
+        .dark .hand-drawn-border {
+            border-color: #a1a1aa;
+            background: #23232a;
+            box-shadow: 4px 4px 0 #27272a, inset 0 0 6px #18181b;
+        }
+
+        .hand-drawn-shadow {
+            filter: drop-shadow(3px 3px 0 #d1d5db);
+        }
+
+        .dark .hand-drawn-shadow {
+            filter: drop-shadow(3px 3px 0 #27272a);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            border: 2px dashed #9ca3af;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 1.125rem;
+            outline: none;
+            background: #fafafa;
+            color: #111827;
+            transition: border-color 0.3s, background 0.3s, color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: yellow;
+            background: #fff;
+            box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+        }
+
+        .dark input[type="text"],
+        .dark input[type="email"],
+        .dark input[type="password"] {
+            border-color: #52525b;
+            background: #23232a;
+            color: #e0e7ef;
+        }
+
+        .dark input[type="text"]:focus,
+        .dark input[type="email"]:focus,
+        .dark input[type="password"]:focus {
+            border-color: yellow;
+            background: #18181b;
+            box-shadow: 0 0 8px rgba(96, 165, 250, 0.3);
+        }
+
+        button.hand-drawn-btn {
+            border: 3px dashed yellow;
+            background: black;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: yellow;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            box-shadow: 3px 3px 0 #93c5fd;
+            user-select: none;
+        }
+
+        button.hand-drawn-btn:hover {
+            background: yellow;
+            color: black;
+            box-shadow: 5px 5px 0 #1e40af;
+        }
+
+        .dark button.hand-drawn-btn {
+            border-color: #60a5fa;
+            background: #18181b;
+            color: #e0e7ff;
+            box-shadow: 3px 3px 0 #334155;
+        }
+
+        .dark button.hand-drawn-btn:hover {
+            background: #2563eb;
+            color: #fff;
+            box-shadow: 5px 5px 0 #1e2937;
+        }
+
+        label {
+            font-size: 1.15rem;
+            color: #374151;
+            margin-bottom: 0.25rem;
+            user-select: none;
+        }
+
+        .dark label {
+            color: #d1d5db;
+        }
+
+        .paper-container {
+            max-width: 420px;
+            margin: 3rem auto;
+            padding: 2.5rem 2rem;
+            background: #fff;
+            box-shadow: 8px 8px 0 #d1d5db, inset 0 0 15px #f9fafb;
+            border-radius: 16px;
+            position: relative;
+        }
+
+        .dark .paper-container {
+            background: #23232a;
+            box-shadow: 8px 8px 0 #27272a, inset 0 0 15px #18181b;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+            position: relative;
+            color: black;
+        }
+
+        .dark h1 {
+            color: yellow;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60px;
+            height: 6px;
+            background: #bfdbfe;
+            border-radius: 4px;
+            box-shadow: 2px 2px 0 #2563eb;
+            transform: rotate(-3deg);
+        }
+
+        .dark h1::after {
+            background: #2563eb;
+            box-shadow: 2px 2px 0 #60a5fa;
+        }
+
+        .note {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+            user-select: none;
+        }
+
+        .dark .note {
+            color: #a1a1aa;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center px-4">
+
+    <button id="theme-toggle" type="button"
+        class="absolute top-5 right-5 z-10 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 transition">
+        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+        </svg>
+        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd" clip-rule="evenodd"></path>
+        </svg>
+    </button>
+
+    <main class="paper-container hand-drawn-shadow hand-drawn-border">
+        <h1>Sign Up</h1>
+        <form action="#" method="POST" class="space-y-6">
+            <div>
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required />
+            </div>
+            <div>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required minlength="6" />
+                <p class="note">At least 6 characters</p>
+            </div>
+            <div>
+                <button type="submit" class="hand-drawn-btn w-full">Create Account</button>
+            </div>
+        </form>
+    </main>
+    <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCOeDrICcabm06H877gVMteQU-41RqK_bA",
+    authDomain: "auth-pf502aa.firebaseapp.com",
+    projectId: "auth-pf502aa",
+    storageBucket: "auth-pf502aa.firebasestorage.app",
+    messagingSenderId: "375753919888",
+    appId: "1:375753919888:web:967435d8649beb5850f715",
+    measurementId: "G-58FZKG5EWF"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+const signupForm = document.querySelector("form");
+
+signupForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const fullname = signupForm.querySelector('#fullname').value;
+    const email = signupForm.querySelector('#email').value;
+    const password = signupForm.querySelector('#password').value;
+
+    try {
+        await createUserWithEmailAndPassword(auth, email, password);
+
+        alert(`Account created successfully!\nWelcome, ${fullname}`);
+        signupForm.reset();
+
+        window.location.href = "login.html"; 
+    } catch (error) {
+        alert("Signup failed: " + error.message);
+    }
+});
+</script>
+
+</body>
+
+</html>
+
+</html>

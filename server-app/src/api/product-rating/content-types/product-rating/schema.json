@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_ratings",
+  "info": {
+    "singularName": "product-rating",
+    "pluralName": "product-ratings",
+    "displayName": "ProductRating"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "star": {
+      "type": "integer"
+    }
+  }
+}
